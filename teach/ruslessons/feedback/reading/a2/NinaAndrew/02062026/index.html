@@ -6,6 +6,7 @@
 <title>Русский язык с Александром — Чехов «Драма на охоте»</title>
 <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+  /* ========== ОСНОВНЫЕ СТИЛИ ========== */
   :root {
     --vtb-cyan:#00B4FF; --vtb-sky:#64CFFF; --ru-red:#D4213D;
     --fb-orange:#F97718; --ans-green:#84e3c8; --sub-color:#758592;
@@ -22,22 +23,16 @@
       linear-gradient(145deg,#0D47A1 0%,#1565C0 30%,#0A2896 55%,#1976D2 100%);
     background-attachment:fixed;}
 
-  /* ═══ HEADER — АДАПТИВНЫЙ ═══ */
+  /* HEADER (адаптивный) */
   .header{position:relative;overflow:hidden;min-height:160px;height:auto;}
   @media (min-width: 768px) { .header { height: 190px; } }
-  
   .header-bg{position:absolute;inset:0;z-index:0;
     background:linear-gradient(135deg,rgba(6,28,105,0.98) 0%,rgba(11,60,145,0.95) 50%,rgba(8,42,130,0.97) 100%);}
-  
-  /* УЗОР НА ШАПКЕ — Гжель + перо Жар-птицы + учебники */
-  .header-pattern{position:absolute;inset:0;z-index:1;width:100%;height:100%;opacity:0.45;pointer-events:none;}
-  
+  .header-pattern{position:absolute;inset:0;z-index:1;width:100%;height:100%;opacity:0.5;pointer-events:none;}
   .header-grid{position:relative;z-index:5;min-height:160px;height:auto;display:flex;align-items:center;justify-content:flex-start;padding:1rem;}
   @media (min-width: 768px) { .header-grid { height: 190px; padding:0 1rem 0 2rem; } }
-  
   .header-left{padding:0;width:auto;flex-shrink:0;align-self:center;max-width:90%;}
   @media (min-width: 768px) { .header-left { max-width: 50%; } }
-  
   .header-card{
     background:rgba(6,22,90,0.85);
     border:1px solid rgba(120,180,255,0.50);
@@ -51,7 +46,6 @@
     overflow:hidden;
   }
   @media (min-width: 768px) { .header-card { width:133%; } }
-  
   .header-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
     background:linear-gradient(90deg,transparent,rgba(150,210,255,.45),transparent);}
   .h-title{font-family:'Days One',sans-serif;font-size:clamp(1rem,4vw,1.6rem);font-weight:400;
@@ -63,7 +57,7 @@
   .badge-container{display:flex;gap:6px;flex-wrap:wrap;margin-top:.6rem;}
   .shimmer{height:1px;background:linear-gradient(90deg,transparent,rgba(0,180,255,.5),#fff,rgba(0,180,255,.5),transparent);}
 
-  /* ═══ TABS (адаптивные) ═══ */
+  /* TABS (адаптивные) */
   .tab-nav{position:sticky;top:0;z-index:99;border-bottom:1px solid rgba(255,255,255,0.14);display:flex;flex-direction:column;box-shadow:0 6px 24px rgba(0,20,100,0.35);overflow:hidden;}
   .tab-nav-bg{position:absolute;inset:0;z-index:0;background:rgba(8,35,130,0.72);backdrop-filter:blur(32px) saturate(200%);}
   .tricolour{display:flex;height:4px;position:relative;z-index:3;flex-shrink:0;}
@@ -80,7 +74,6 @@
 
   main{max-width:860px;margin:0 auto;padding:1.5rem 1rem 4rem;}
   @media (min-width: 768px) { main { padding: 2rem 1.25rem 5rem; } }
-  
   .section { display: block; animation:fadeUp .3s ease; }
   .js-tabs .section { display: none; }
   .js-tabs .section.active { display: block; }
@@ -105,14 +98,33 @@
   @media (min-width: 768px) { .word-head { padding: 1rem 1.4rem 1rem 1.5rem; gap: 1rem; } }
   .word-ru{font-size:clamp(18px,6vw,22px);font-weight:600;color:#fff;text-shadow:0 0 14px rgba(0,180,255,.38);}
   .word-en{font-size:clamp(11px,3.5vw,13px);color:var(--vtb-sky);}
-  .word-tag{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:rgba(0,180,255,.12);color:var(--vtb-sky);border:1px solid rgba(0,180,255,.22);}
+  .word-tag{font-size:10px;font-weight:600;letter-spacing:.05em;padding:3px 10px;border-radius:100px;background:rgba(0,180,255,.15);color:var(--vtb-cyan);border:1px solid rgba(0,180,255,.4);}
+  
   .seg{padding:0.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.05);font-size:clamp(12px,3.5vw,13.5px);line-height:1.6;}
   @media (min-width: 768px) { .seg { padding: 0.82rem 1.4rem 0.82rem 1.5rem; } }
   .seg-label{display:inline-block;font-family:'Days One',sans-serif;font-size:11px;color:var(--vtb-sky);margin-bottom:6px;padding:3px 12px;border:1px solid rgba(0,180,255,0.35);border-radius:100px;background:rgba(0,180,255,0.10);}
+  .seg-content{color:var(--text);}
+  .seg-content strong{color:var(--vtb-sky);}
+
+  /* ТАБЛИЦЫ СКЛОНЕНИЙ */
+  .decl-wrap{overflow-x:auto;margin-top:8px;}
+  table.decl{width:100%;border-collapse:collapse;font-size:clamp(11px,3vw,12.5px);}
+  table.decl th{background:rgba(0,180,255,.10);color:var(--vtb-sky);font-weight:600;padding:7px 10px;text-align:left;border:1px solid rgba(255,255,255,.07);}
+  table.decl th.form-header{background:rgba(0,180,255,.07);color:rgba(100,207,255,.75);font-size:10.5px;}
+  table.decl td{padding:7px 10px;border:1px solid rgba(255,255,255,.05);color:var(--text);vertical-align:top;}
+  table.decl tr:nth-child(even) td{background:rgba(255,255,255,.025);}
+  .case-ru{font-weight:600;color:#fff;display:block;line-height:1.3;}
+  .case-en-sub{font-size:9px;color:var(--text-dim);display:block;line-height:1.2;}
+  .q-words{font-style:italic;color:var(--vtb-sky);display:block;line-height:1.3;}
+  .q-words-en{font-size:9px;color:var(--text-dim);display:block;}
+  .form-cell{color:var(--text);font-size:clamp(11px,3vw,13.5px);}
+  .table-note{font-size:10px; margin-top:8px; color:var(--text-dim); font-style:italic;}
+
   .phrase-card{margin-bottom:1.1rem;}
   .phrase-head{display:flex;align-items:center;gap:0.7rem;padding:0.8rem 1rem;background:linear-gradient(90deg,rgba(0,50,150,0.60),rgba(0,80,200,0.30),transparent);border-bottom:1px solid rgba(255,255,255,.07);flex-wrap:wrap;}
   @media (min-width: 768px) { .phrase-head { padding: 0.9rem 1.4rem 0.9rem 1.5rem; gap: 0.75rem; } }
-  .phrase-ru{font-size:clamp(16px,5vw,18px);font-weight:600;color:#fff;}
+  .phrase-ru{font-size:clamp(16px,5vw,18px);font-weight:600;color:#fff;text-transform:lowercase;}
+  .phrase-ru::first-letter{text-transform:uppercase;}
   .phrase-en{font-size:clamp(10px,3vw,12px);color:var(--vtb-sky);}
   .phrase-type{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:rgba(255,180,0,.15);color:#FFD700;border:1px solid rgba(255,180,0,.35);}
   
@@ -120,7 +132,6 @@
   .ex-head{display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;background:linear-gradient(90deg,rgba(0,50,160,0.75),rgba(0,80,200,0.45));border-bottom:1px solid rgba(255,255,255,.08);color:#fff;}
   @media (min-width: 768px) { .ex-head { padding: 0.85rem 1.4rem; gap: 0.75rem; } }
   .ex-num{width:26px;height:26px;border-radius:50%;background:rgba(0,180,255,.18);border:1px solid rgba(0,180,255,.4);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;color:var(--vtb-cyan);}
-  @media (min-width: 768px) { .ex-num { width: 27px; height: 27px; font-size: 13px; } }
   .ex-title{font-family:'Days One',sans-serif;font-size:clamp(12px,4vw,14px);font-weight:400;}
   .ex-body{padding:1rem;font-size:clamp(13px,4vw,14px);line-height:1.8;}
   @media (min-width: 768px) { .ex-body { padding: 1.15rem 1.4rem; } }
@@ -156,94 +167,158 @@
 <header class="header">
   <div class="header-bg"></div>
   
-  <!-- УЗОР: Гжель + перья Жар-птицы + учебники -->
+  <!-- УЗОР: Гжель + перья Жар-птицы + учебники + Пушкин + чернильница + открытая книга + РУЧКА + ПЕРО -->
   <svg class="header-pattern" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
     <defs>
       <style>
-        .gz-cobalt { stroke:#5B9BD5; fill:none; }
-        .gz-mid { stroke:#7AB8E8; fill:none; }
-        .gz-white { stroke:rgba(255,255,255,0.5); fill:none; }
-        .gf-cobalt { fill:rgba(91,155,213,0.25); stroke:none; }
-        .gf-mid { fill:rgba(122,184,232,0.2); stroke:none; }
+        .gz-cobalt { stroke:#5B9BD5; fill:none; } 
+        .gz-mid { stroke:#7AB8E8; fill:none; } 
+        .gz-white { stroke:rgba(255,255,255,0.6); fill:none; } 
+        .gf-cobalt { fill:rgba(91,155,213,0.3); stroke:none; } 
+        .gf-mid { fill:rgba(122,184,232,0.25); stroke:none; }
       </style>
+      
       <!-- Гжельская роза -->
       <g id="gz-rose">
         <path d="M0-20C-8-28-15-25-12-15C-8-7-3-5 0-5 3-5 8-7 12-15 15-25 8-28 0-20Z" class="gf-cobalt"/>
         <path d="M0-20C-8-28-15-25-12-15C-8-7-3-5 0-5 3-5 8-7 12-15 15-25 8-28 0-20Z" class="gz-cobalt" stroke-width="1.2"/>
         <path d="M0-20C-8-28-15-25-12-15C-8-7-3-5 0-5 3-5 8-7 12-15 15-25 8-28 0-20Z" class="gf-cobalt" transform="rotate(72)"/>
         <path d="M0-20C-8-28-15-25-12-15C-8-7-3-5 0-5 3-5 8-7 12-15 15-25 8-28 0-20Z" class="gf-mid" transform="rotate(144)"/>
-        <circle r="6" fill="rgba(26,61,168,0.4)"/><circle r="3" fill="rgba(122,184,232,0.6)"/>
+        <circle r="6" fill="rgba(26,61,168,0.5)"/>
+        <circle r="3" fill="rgba(122,184,232,0.7)"/>
       </g>
+      
       <!-- Перо Жар-птицы -->
       <g id="firebird-feather">
         <path d="M0,0 C12,-28 28,-45 40,-50 C36,-38 32,-22 34,0 C32,22 36,38 40,50 C28,45 12,28 0,0Z" class="gf-mid"/>
         <path d="M0,0 C12,-28 28,-45 40,-50" class="gz-cobalt" stroke-width="1.3"/>
         <path d="M0,0 C12,-18 24,-26 32,-28" class="gz-white" stroke-width="1"/>
         <path d="M0,0 C12,18 24,26 32,28" class="gz-white" stroke-width="1"/>
-        <ellipse cx="20" cy="0" rx="5" ry="10" fill="rgba(100,207,255,0.3)" class="gz-cobalt" stroke-width="0.8"/>
-        <!-- Дополнительные "глазки" пера -->
-        <circle cx="28" cy="-15" r="2" fill="rgba(100,207,255,0.4)"/>
-        <circle cx="28" cy="15" r="2" fill="rgba(100,207,255,0.4)"/>
+        <ellipse cx="20" cy="0" rx="5" ry="10" fill="rgba(100,207,255,0.35)" class="gz-cobalt" stroke-width="0.8"/>
+        <circle cx="28" cy="-15" r="2.5" fill="rgba(100,207,255,0.5)"/>
+        <circle cx="28" cy="15" r="2.5" fill="rgba(100,207,255,0.5)"/>
       </g>
+      
       <!-- Учебник / книга -->
       <g id="book">
-        <rect x="-15" y="-18" width="30" height="24" rx="2" class="gf-cobalt" stroke="#5B9BD5" stroke-width="0.8" fill="rgba(91,155,213,0.15)"/>
+        <rect x="-15" y="-18" width="30" height="24" rx="2" class="gf-cobalt" stroke="#5B9BD5" stroke-width="0.8" fill="rgba(91,155,213,0.2)"/>
         <line x1="0" y1="-18" x2="0" y2="6" class="gz-white" stroke-width="0.8"/>
         <line x1="-10" y1="-12" x2="-3" y2="-12" class="gz-white" stroke-width="0.6"/>
         <line x1="-10" y1="-8" x2="-3" y2="-8" class="gz-white" stroke-width="0.6"/>
         <line x1="3" y1="-12" x2="10" y2="-12" class="gz-white" stroke-width="0.6"/>
         <line x1="3" y1="-8" x2="10" y2="-8" class="gz-white" stroke-width="0.6"/>
-        <path d="M-15,-18 L-15,6 Q-15,10 -10,8 L0,4 L0,-18 Z" class="gf-mid" stroke="#7AB8E8" stroke-width="0.5" fill="rgba(122,184,232,0.1)"/>
+        <path d="M-15,-18 L-15,6 Q-15,10 -10,8 L0,4 L0,-18 Z" class="gf-mid" stroke="#7AB8E8" stroke-width="0.5" fill="rgba(122,184,232,0.15)"/>
+      </g>
+      
+      <!-- Силуэт А.С. Пушкина -->
+      <g id="pushkin-silhouette">
+        <path d="M0,-32 C-4,-30 -6,-26 -5,-22 C-4,-18 0,-16 5,-18 C8,-20 9,-25 8,-28 C7,-31 3,-33 0,-32Z" fill="rgba(91,155,213,0.5)" stroke="#5B9BD5" stroke-width="0.8"/>
+        <path d="M-5,-22 C-8,-18 -12,-12 -12,-6 C-12,0 -8,6 -4,8 C0,10 5,8 8,4" fill="rgba(91,155,213,0.35)" stroke="#5B9BD5" stroke-width="0.8"/>
+        <path d="M-4,8 C-8,14 -12,22 -10,30 C-8,36 -4,40 0,42 C4,40 8,36 10,30 C12,22 8,14 4,8" fill="rgba(122,184,232,0.25)" stroke="#7AB8E8" stroke-width="0.7"/>
+        <path d="M-5,-22 C-10,-20 -12,-16 -10,-12" stroke="rgba(91,155,213,0.6)" stroke-width="1" fill="none"/>
+        <rect x="-6" y="-42" width="12" height="14" rx="1" fill="rgba(91,155,213,0.4)" stroke="#5B9BD5" stroke-width="0.6"/>
+        <rect x="-8" y="-28" width="16" height="3" rx="1" fill="rgba(91,155,213,0.5)" stroke="#5B9BD5" stroke-width="0.5"/>
+      </g>
+      
+      <!-- Чернильница -->
+      <g id="inkwell">
+        <rect x="-12" y="-8" width="24" height="14" rx="3" class="gf-cobalt" stroke="#5B9BD5" stroke-width="0.8" fill="rgba(91,155,213,0.25)"/>
+        <rect x="-6" y="-12" width="12" height="6" rx="2" class="gf-mid" stroke="#7AB8E8" stroke-width="0.6" fill="rgba(122,184,232,0.2)"/>
+        <ellipse cx="0" cy="-12" rx="7" ry="2.5" class="gf-cobalt" stroke="#5B9BD5" stroke-width="0.6" fill="rgba(91,155,213,0.3)"/>
+        <ellipse cx="0" cy="-8" rx="8" ry="2" fill="rgba(26,61,168,0.6)"/>
+      </g>
+      
+      <!-- ПЕРО (старинное, для письма) -->
+      <g id="quill-pen">
+        <path d="M0,0 C-3,-8 -5,-18 -2,-28 C0,-35 4,-40 8,-42 C6,-36 5,-30 4,-25 C6,-22 8,-18 7,-12 C6,-8 4,-4 0,0Z" fill="rgba(122,184,232,0.35)" stroke="#7AB8E8" stroke-width="0.7"/>
+        <path d="M0,0 C-1,-6 -2,-12 -1,-18" stroke="#5B9BD5" stroke-width="0.5" fill="none"/>
+        <path d="M-2,-28 C-1,-32 1,-36 3,-40" stroke="rgba(255,255,255,0.5)" stroke-width="0.6" fill="none"/>
+      </g>
+      
+      <!-- РУЧКА (перьевой ручкой) -->
+      <g id="fountain-pen">
+        <rect x="-2" y="-20" width="4" height="22" rx="1" fill="rgba(91,155,213,0.4)" stroke="#5B9BD5" stroke-width="0.6"/>
+        <path d="M-2,-20 L0,-28 L2,-20 Z" fill="rgba(122,184,232,0.5)" stroke="#7AB8E8" stroke-width="0.5"/>
+        <rect x="-3" y="2" width="6" height="3" rx="0.5" fill="rgba(91,155,213,0.3)" stroke="#5B9BD5" stroke-width="0.4"/>
+        <path d="M0,-28 L0,-32" stroke="rgba(100,207,255,0.6)" stroke-width="0.8"/>
+      </g>
+      
+      <!-- Открытая книга -->
+      <g id="open-book">
+        <path d="M-22,-14 L-3,-18 L0,-16 L3,-18 L22,-14 L20,12 L3,14 L0,12 L-3,14 L-20,12 Z" class="gf-cobalt" stroke="#5B9BD5" stroke-width="0.8" fill="rgba(91,155,213,0.2)"/>
+        <line x1="0" y1="-16" x2="0" y2="12" class="gz-white" stroke-width="0.8"/>
+        <line x1="-15" y1="-9" x2="-4" y2="-12" class="gz-white" stroke-width="0.5"/>
+        <line x1="-13" y1="-3" x2="-4" y2="-6" class="gz-white" stroke-width="0.5"/>
+        <line x1="4" y1="-12" x2="15" y2="-9" class="gz-white" stroke-width="0.5"/>
+        <line x1="4" y1="-6" x2="13" y2="-3" class="gz-white" stroke-width="0.5"/>
+        <path d="M-20,12 L-20,-14 Q-10,-16 0,-16 Q10,-16 20,-14 L20,12 Q10,10 0,10 Q-10,10 -20,12Z" fill="rgba(122,184,232,0.1)" stroke="#7AB8E8" stroke-width="0.5"/>
       </g>
     </defs>
     
-    <!-- Гжельские розы (много) -->
-    <use href="#gz-rose" transform="translate(60,95) scale(1.4)" opacity="0.55"/>
-    <use href="#gz-rose" transform="translate(180,50) scale(1)" opacity="0.45"/>
-    <use href="#gz-rose" transform="translate(180,140) scale(1)" opacity="0.45"/>
-    <use href="#gz-rose" transform="translate(340,80) scale(1.1)" opacity="0.5"/>
-    <use href="#gz-rose" transform="translate(340,120) scale(0.8)" opacity="0.4"/>
-    <use href="#gz-rose" transform="translate(500,55) scale(0.9)" opacity="0.45"/>
-    <use href="#gz-rose" transform="translate(500,135) scale(0.9)" opacity="0.45"/>
-    <use href="#gz-rose" transform="translate(700,55) scale(0.9)" opacity="0.45"/>
-    <use href="#gz-rose" transform="translate(700,135) scale(0.9)" opacity="0.45"/>
-    <use href="#gz-rose" transform="translate(860,80) scale(1.1)" opacity="0.5"/>
-    <use href="#gz-rose" transform="translate(860,120) scale(0.8)" opacity="0.4"/>
-    <use href="#gz-rose" transform="translate(1020,50) scale(1)" opacity="0.45"/>
-    <use href="#gz-rose" transform="translate(1020,140) scale(1)" opacity="0.45"/>
-    <use href="#gz-rose" transform="translate(1140,95) scale(1.4)" opacity="0.55"/>
+    <!-- Гжельские розы -->
+    <use href="#gz-rose" transform="translate(50,95) scale(1.4)" opacity="0.6"/>
+    <use href="#gz-rose" transform="translate(160,45) scale(1)" opacity="0.5"/>
+    <use href="#gz-rose" transform="translate(160,145) scale(1)" opacity="0.5"/>
+    <use href="#gz-rose" transform="translate(310,75) scale(1.1)" opacity="0.55"/>
+    <use href="#gz-rose" transform="translate(460,50) scale(0.9)" opacity="0.5"/>
+    <use href="#gz-rose" transform="translate(460,140) scale(0.9)" opacity="0.5"/>
+    <use href="#gz-rose" transform="translate(620,50) scale(0.9)" opacity="0.5"/>
+    <use href="#gz-rose" transform="translate(620,140) scale(0.9)" opacity="0.5"/>
+    <use href="#gz-rose" transform="translate(770,80) scale(1.1)" opacity="0.55"/>
+    <use href="#gz-rose" transform="translate(920,45) scale(1)" opacity="0.5"/>
+    <use href="#gz-rose" transform="translate(920,145) scale(1)" opacity="0.5"/>
+    <use href="#gz-rose" transform="translate(1050,50) scale(0.9)" opacity="0.5"/>
+    <use href="#gz-rose" transform="translate(1150,95) scale(1.4)" opacity="0.6"/>
     
     <!-- Перья Жар-птицы -->
-    <use href="#firebird-feather" transform="translate(120,95) rotate(-10) scale(1.1)" opacity="0.5"/>
-    <use href="#firebird-feather" transform="translate(280,95) rotate(15) scale(0.9)" opacity="0.45"/>
-    <use href="#firebird-feather" transform="translate(440,40) rotate(-25) scale(0.8)" opacity="0.4"/>
-    <use href="#firebird-feather" transform="translate(440,150) rotate(25) scale(0.8)" opacity="0.4"/>
-    <use href="#firebird-feather" transform="translate(600,95) rotate(5) scale(1)" opacity="0.5"/>
-    <use href="#firebird-feather" transform="translate(760,40) rotate(-20) scale(0.8)" opacity="0.4"/>
-    <use href="#firebird-feather" transform="translate(760,150) rotate(20) scale(0.8)" opacity="0.4"/>
-    <use href="#firebird-feather" transform="translate(920,95) rotate(-10) scale(0.9)" opacity="0.45"/>
-    <use href="#firebird-feather" transform="translate(1080,95) rotate(15) scale(1.1)" opacity="0.5"/>
+    <use href="#firebird-feather" transform="translate(110,95) rotate(-10) scale(1.1)" opacity="0.55"/>
+    <use href="#firebird-feather" transform="translate(250,95) rotate(15) scale(0.9)" opacity="0.5"/>
+    <use href="#firebird-feather" transform="translate(400,35) rotate(-25) scale(0.8)" opacity="0.45"/>
+    <use href="#firebird-feather" transform="translate(550,95) rotate(5) scale(1)" opacity="0.55"/>
+    <use href="#firebird-feather" transform="translate(700,35) rotate(-20) scale(0.8)" opacity="0.45"/>
+    <use href="#firebird-feather" transform="translate(850,95) rotate(-10) scale(0.9)" opacity="0.5"/>
+    <use href="#firebird-feather" transform="translate(1000,95) rotate(15) scale(1.1)" opacity="0.55"/>
     
     <!-- Учебники / книги -->
-    <use href="#book" transform="translate(240,70) rotate(-15) scale(1)" opacity="0.5"/>
-    <use href="#book" transform="translate(260,130) rotate(10) scale(0.9)" opacity="0.45"/>
-    <use href="#book" transform="translate(480,100) rotate(-5) scale(1.1)" opacity="0.5"/>
-    <use href="#book" transform="translate(720,100) rotate(5) scale(1.1)" opacity="0.5"/>
-    <use href="#book" transform="translate(940,70) rotate(-10) scale(0.9)" opacity="0.45"/>
-    <use href="#book" transform="translate(960,130) rotate(15) scale(1)" opacity="0.5"/>
+    <use href="#book" transform="translate(200,70) rotate(-15) scale(1)" opacity="0.55"/>
+    <use href="#book" transform="translate(430,105) rotate(-5) scale(1.1)" opacity="0.55"/>
+    <use href="#book" transform="translate(650,105) rotate(5) scale(1.1)" opacity="0.55"/>
+    <use href="#book" transform="translate(880,65) rotate(-10) scale(0.9)" opacity="0.5"/>
+    
+    <!-- Пушкин -->
+    <use href="#pushkin-silhouette" transform="translate(340,95) scale(1.4)" opacity="0.6"/>
+    <use href="#pushkin-silhouette" transform="translate(760,95) scale(1.4) scale(-1,1)" opacity="0.55"/>
+    
+    <!-- Чернильницы -->
+    <use href="#inkwell" transform="translate(520,125) scale(1.2)" opacity="0.6"/>
+    <use href="#inkwell" transform="translate(590,55) scale(1)" opacity="0.5"/>
+    
+    <!-- ПЕРО (старинное) - ДОБАВЛЕНО -->
+    <use href="#quill-pen" transform="translate(500,135) rotate(-30) scale(1.1)" opacity="0.55"/>
+    <use href="#quill-pen" transform="translate(610,45) rotate(20) scale(0.9)" opacity="0.5"/>
+    <use href="#quill-pen" transform="translate(830,125) rotate(-15) scale(1)" opacity="0.5"/>
+    
+    <!-- РУЧКА (перьевая) - ДОБАВЛЕНО -->
+    <use href="#fountain-pen" transform="translate(540,115) rotate(-10) scale(1)" opacity="0.55"/>
+    <use href="#fountain-pen" transform="translate(570,65) rotate(15) scale(0.9)" opacity="0.5"/>
+    <use href="#fountain-pen" transform="translate(850,105) rotate(-5) scale(1)" opacity="0.5"/>
+    
+    <!-- Открытые книги -->
+    <use href="#open-book" transform="translate(270,140) rotate(-12) scale(1.3)" opacity="0.55"/>
+    <use href="#open-book" transform="translate(830,50) rotate(8) scale(1.2)" opacity="0.5"/>
     
     <!-- Орнаментальные линии -->
-    <path d="M0,30 Q60,20 120,30 Q180,40 240,30 Q300,20 360,30 Q420,40 480,30 Q540,20 600,30 Q660,40 720,30 Q780,20 840,30 Q900,40 960,30 Q1020,20 1080,30 Q1140,40 1200,30" class="gz-white" stroke-width="0.8" opacity="0.35" fill="none"/>
-    <path d="M0,160 Q60,170 120,160 Q180,150 240,160 Q300,170 360,160 Q420,150 480,160 Q540,170 600,160 Q660,150 720,160 Q780,170 840,160 Q900,150 960,160 Q1020,170 1080,160 Q1140,150 1200,160" class="gz-white" stroke-width="0.8" opacity="0.35" fill="none"/>
+    <path d="M0,28 Q60,18 120,28 Q180,38 240,28 Q300,18 360,28 Q420,38 480,28 Q540,18 600,28 Q660,38 720,28 Q780,18 840,28 Q900,38 960,28 Q1020,18 1080,28 Q1140,38 1200,28" class="gz-white" stroke-width="0.9" opacity="0.4" fill="none"/>
+    <path d="M0,162 Q60,172 120,162 Q180,152 240,162 Q300,172 360,162 Q420,152 480,162 Q540,172 600,162 Q660,152 720,162 Q780,172 840,162 Q900,152 960,162 Q1020,172 1080,162 Q1140,152 1200,162" class="gz-white" stroke-width="0.9" opacity="0.4" fill="none"/>
     
     <!-- Точки-жемчужины -->
-    <g fill="rgba(122,184,232,0.4)">
-      <circle cx="90" cy="28" r="2"/><circle cx="210" cy="32" r="2"/><circle cx="330" cy="28" r="2"/>
-      <circle cx="450" cy="32" r="2"/><circle cx="570" cy="28" r="2"/><circle cx="690" cy="32" r="2"/>
-      <circle cx="810" cy="28" r="2"/><circle cx="930" cy="32" r="2"/><circle cx="1050" cy="28" r="2"/><circle cx="1110" cy="32" r="2"/>
-      <circle cx="90" cy="162" r="2"/><circle cx="210" cy="158" r="2"/><circle cx="330" cy="162" r="2"/>
-      <circle cx="450" cy="158" r="2"/><circle cx="570" cy="162" r="2"/><circle cx="690" cy="158" r="2"/>
-      <circle cx="810" cy="162" r="2"/><circle cx="930" cy="158" r="2"/><circle cx="1050" cy="162" r="2"/><circle cx="1110" cy="158" r="2"/>
+    <g fill="rgba(122,184,232,0.5)">
+      <circle cx="80" cy="26" r="2.5"/><circle cx="200" cy="30" r="2.5"/><circle cx="320" cy="26" r="2.5"/>
+      <circle cx="440" cy="30" r="2.5"/><circle cx="560" cy="26" r="2.5"/><circle cx="680" cy="30" r="2.5"/>
+      <circle cx="800" cy="26" r="2.5"/><circle cx="920" cy="30" r="2.5"/><circle cx="1040" cy="26" r="2.5"/><circle cx="1120" cy="30" r="2.5"/>
+      <circle cx="80" cy="164" r="2.5"/><circle cx="200" cy="160" r="2.5"/><circle cx="320" cy="164" r="2.5"/>
+      <circle cx="440" cy="160" r="2.5"/><circle cx="560" cy="164" r="2.5"/><circle cx="680" cy="160" r="2.5"/>
+      <circle cx="800" cy="164" r="2.5"/><circle cx="920" cy="160" r="2.5"/><circle cx="1040" cy="164" r="2.5"/><circle cx="1120" cy="160" r="2.5"/>
     </g>
   </svg>
   
@@ -274,82 +349,166 @@
 </nav>
 
 <main>
+  <!-- ===================== РАЗДЕЛ "СЛОВА" ===================== -->
   <div id="words" class="section active">
-    <div style="margin-bottom:1.5rem;"><div class="sec-label"><h2>Текст урока</h2><span class="pill">New text</span></div><div class="g-card blue-strip text-card"><p>Серге́й въе́хал в уса́дьбу гра́фа. Никто́ его́ не встреча́л. Все две́ри бы́ли откры́ты, но в до́ме никого́ не бы́ло. По <em>ма́рморной терра́се</em> он прошёл в сад и уви́дел под бе́лыми ака́циями стол с <em>самова́ром</em>. За столо́м сиде́л граф Карне́ев в хала́те и в <em>соло́менной шля́пе</em> и пил чай. Ря́дом с ним сиде́л како́й-то то́лстый <em>челове́к с дли́нными уса́ми</em>. Он пил не чай, а минера́льную во́ду. Не о́чень далеко́ от стола́ стоя́л <em>управля́ющий</em> гра́фа Урбе́нин, а ря́дом с ним слуга́, кото́рый сего́дня прие́зжал к Серге́ю с письмо́м.</p></div></div>
+    <div style="margin-bottom:1.5rem;">
+      <div class="sec-label"><h2>Текст урока</h2><span class="pill">New text</span></div>
+      <div class="g-card blue-strip text-card">
+        <p>Серге́й въе́хал в уса́дьбу гра́фа. Никто́ его́ не встреча́л. Все две́ри бы́ли откры́ты, но в до́ме никого́ не бы́ло. По <em>ма́рморной терра́се</em> он прошёл в сад и уви́дел под бе́лыми ака́циями стол с <em>самова́ром</em>. За столо́м сиде́л граф Карне́ев в хала́те и в <em>соло́менной шля́пе</em> и пил чай. Ря́дом с ним сиде́л како́й-то то́лстый <em>челове́к с дли́нными уса́ми</em>. Он пил не чай, а минера́льную во́ду. Не о́чень далеко́ от стола́ стоя́л <em>управля́ющий</em> гра́фа Урбе́нин, а ря́дом с ним слуга́, кото́рый сего́дня прие́зжал к Серге́ю с письмо́м.</p>
+      </div>
+    </div>
     
     <div class="sec-label"><h2>Слова урока</h2><span class="pill">5 new words</span></div>
     
-    <div class="g-card blue-strip word-card"><div class="word-head"><div><div class="word-ru">Мра́морный</div><div class="word-en">marble (adj.)</div></div><span class="word-tag">прил.</span></div><div class="seg"><div class="seg-label">Значение</div><div class="seg-content">Сделанный из мрамора. Пример: мра́морная терра́са.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«По ма́рморной терра́се он прошёл в сад.»</div></div></div>
+    <!-- СЛОВО 1: мраморный (прилагательное) -->
+    <div class="g-card blue-strip word-card">
+      <div class="word-head"><div><div class="word-ru">Мра́морный</div><div class="word-en">marble (adj.)</div></div><span class="word-tag">ПРИЛ.</span></div>
+      <div class="seg"><div class="seg-label">Значение · Meaning</div><div class="seg-content">Сделанный из мрамора / Made of marble.</div></div>
+      <div class="seg"><div class="seg-label">В тексте · In the text</div><div class="seg-content">«По ма́рморной терра́се он прошёл в сад.» (мраморная терраса — marble terrace)</div></div>
+      <div class="seg"><div class="seg-label">Склонение · Declension (мужской род)</div><div class="seg-content decl-wrap">
+        <table class="decl">
+          <thead>
+            <tr><th rowspan="2">Падеж</th><th rowspan="2">Вопрос · Question</th><th colspan="2">Форма · Form</th></tr>
+            <tr><th class="form-header">Ед. ч. · Singular</th><th class="form-header">Мн. ч. · Plural</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="case-ru">Именительный</span><span class="case-en-sub">Nominative</span></td><td><span class="q-words">Какой?</span><span class="q-words-en">Which?</span></td><td class="form-cell">мра́морный</td><td class="form-cell">мра́морные</td></tr>
+            <tr><td><span class="case-ru">Родительный</span><span class="case-en-sub">Genitive</span></td><td><span class="q-words">Какого? (откуда? без чего?)</span><span class="q-words-en">Of which? (from where? without what?)</span></td><td class="form-cell">мра́морного</td><td class="form-cell">мра́морных</td></tr>
+            <tr><td><span class="case-ru">Дательный</span><span class="case-en-sub">Dative</span></td><td><span class="q-words">Какому? (к чему?)</span><span class="q-words-en">To which? (towards what?)</span></td><td class="form-cell">мра́морному</td><td class="form-cell">мра́морным</td></tr>
+            <tr><td><span class="case-ru">Винительный</span><span class="case-en-sub">Accusative</span></td><td><span class="q-words">Какой? / Какого? (вижу что? / кого?)</span><span class="q-words-en">Which? (see what? / whom?)</span></td><td class="form-cell">мра́морный / мра́морного</td><td class="form-cell">мра́морные / мра́морных</td></tr>
+            <tr><td><span class="case-ru">Творительный</span><span class="case-en-sub">Instrumental</span></td><td><span class="q-words">Каким? (с чем? / с кем?)</span><span class="q-words-en">With which? (with what? / with whom?)</span></td><td class="form-cell">мра́морным</td><td class="form-cell">мра́морными</td></tr>
+            <tr><td><span class="case-ru">Предложный</span><span class="case-en-sub">Prepositional</span></td><td><span class="q-words">О каком? (о чём? / о ком?)</span><span class="q-words-en">About which? (about what? / about whom?)</span></td><td class="form-cell">о мра́морном</td><td class="form-cell">о мра́морных</td></tr>
+          </tbody>
+        </table>
+        <div class="table-note">※ Женский род: мра́морная, мра́морной, мра́морную... / Средний род: мра́морное, мра́морного, мра́морному...</div>
+      </div></div>
+    </div>
     
-    <div class="g-card blue-strip word-card"><div class="word-head"><div><div class="word-ru">Соло́менный</div><div class="word-en">straw (adj.)</div></div><span class="word-tag">прил.</span></div><div class="seg"><div class="seg-label">Значение</div><div class="seg-content">Сделанный из соломы. Пример: соло́менная шля́па.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«Граф Карне́ев ... в соло́менной шля́пе пил чай.»</div></div></div>
+    <!-- СЛОВО 2: соломенный (прилагательное) -->
+    <div class="g-card blue-strip word-card">
+      <div class="word-head"><div><div class="word-ru">Соло́менный</div><div class="word-en">straw (adj.)</div></div><span class="word-tag">ПРИЛ.</span></div>
+      <div class="seg"><div class="seg-label">Значение · Meaning</div><div class="seg-content">Сделанный из соломы / Made of straw.</div></div>
+      <div class="seg"><div class="seg-label">В тексте · In the text</div><div class="seg-content">«Граф Карне́ев ... в соло́менной шля́пе пил чай.» (соломенная шляпа — straw hat)</div></div>
+      <div class="seg"><div class="seg-label">Склонение · Declension (мужской род)</div><div class="seg-content decl-wrap">
+        <table class="decl">
+          <thead>
+            <tr><th rowspan="2">Падеж</th><th rowspan="2">Вопрос · Question</th><th colspan="2">Форма · Form</th></tr>
+            <tr><th class="form-header">Ед. ч. · Singular</th><th class="form-header">Мн. ч. · Plural</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="case-ru">Именительный</span><span class="case-en-sub">Nominative</span></td><td><span class="q-words">Какой?</span><span class="q-words-en">Which?</span></td><td class="form-cell">соло́менный</td><td class="form-cell">соло́менные</td></tr>
+            <tr><td><span class="case-ru">Родительный</span><span class="case-en-sub">Genitive</span></td><td><span class="q-words">Какого? (откуда? без чего?)</span><span class="q-words-en">Of which? (from where? without what?)</span></td><td class="form-cell">соло́менного</td><td class="form-cell">соло́менных</td></tr>
+            <tr><td><span class="case-ru">Дательный</span><span class="case-en-sub">Dative</span></td><td><span class="q-words">Какому? (к чему?)</span><span class="q-words-en">To which? (towards what?)</span></td><td class="form-cell">соло́менному</td><td class="form-cell">соло́менным</td></tr>
+            <tr><td><span class="case-ru">Винительный</span><span class="case-en-sub">Accusative</span></td><td><span class="q-words">Какой? / Какого? (вижу что? / кого?)</span><span class="q-words-en">Which? (see what? / whom?)</span></td><td class="form-cell">соло́менный / соло́менного</td><td class="form-cell">соло́менные / соло́менных</td></tr>
+            <tr><td><span class="case-ru">Творительный</span><span class="case-en-sub">Instrumental</span></td><td><span class="q-words">Каким? (с чем? / с кем?)</span><span class="q-words-en">With which? (with what? / with whom?)</span></td><td class="form-cell">соло́менным</td><td class="form-cell">соло́менными</td></tr>
+            <tr><td><span class="case-ru">Предложный</span><span class="case-en-sub">Prepositional</span></td><td><span class="q-words">О каком? (о чём? / о ком?)</span><span class="q-words-en">About which? (about what? / about whom?)</span></td><td class="form-cell">о соло́менном</td><td class="form-cell">о соло́менных</td></tr>
+          </tbody>
+        </table>
+        <div class="table-note">※ Женский род: соло́менная, соло́менной, соло́менную... / Средний род: соло́менное, соло́менного, соло́менному...</div>
+      </div></div>
+    </div>
     
-    <div class="g-card blue-strip word-card"><div class="word-head"><div><div class="word-ru">Самова́р</div><div class="word-en">samovar</div></div><span class="word-tag">сущ. м.р.</span></div><div class="seg"><div class="seg-label">Значение</div><div class="seg-content">Прибор для кипячения воды. Символ русского чаепития.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«...уви́дел под бе́лыми ака́циями стол с самова́ром.»</div></div></div>
+    <!-- СЛОВО 3: самовар (существительное) -->
+    <div class="g-card blue-strip word-card">
+      <div class="word-head"><div><div class="word-ru">Самова́р</div><div class="word-en">samovar (tea urn)</div></div><span class="word-tag">СУЩ.</span></div>
+      <div class="seg"><div class="seg-label">Значение · Meaning</div><div class="seg-content">Металлический прибор для кипячения воды с краном. Традиционный символ русского чаепития.</div></div>
+      <div class="seg"><div class="seg-label">В тексте · In the text</div><div class="seg-content">«...уви́дел под бе́лыми ака́циями стол с самова́ром.» (стол с самоваром — table with a samovar)</div></div>
+      <div class="seg"><div class="seg-label">Склонение · Declension (мужской род)</div><div class="seg-content decl-wrap">
+        <table class="decl">
+          <thead>
+            <tr><th rowspan="2">Падеж</th><th rowspan="2">Вопрос · Question</th><th colspan="2">Форма · Form</th></tr>
+            <tr><th class="form-header">Ед. ч. · Singular</th><th class="form-header">Мн. ч. · Plural</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="case-ru">Именительный</span><span class="case-en-sub">Nominative</span></td><td><span class="q-words">Кто? Что?</span><span class="q-words-en">Who? What?</span></td><td class="form-cell">самова́р</td><td class="form-cell">самова́ры</td></tr>
+            <tr><td><span class="case-ru">Родительный</span><span class="case-en-sub">Genitive</span></td><td><span class="q-words">Кого́? Чего́? (откуда? без чего?)</span><span class="q-words-en">Whom? Of what? (from where? without what?)</span></td><td class="form-cell">самова́ра</td><td class="form-cell">самова́ров</td></tr>
+            <tr><td><span class="case-ru">Дательный</span><span class="case-en-sub">Dative</span></td><td><span class="q-words">Кому́? Чему́? (к чему?)</span><span class="q-words-en">To whom? To what? (towards what?)</span></td><td class="form-cell">самова́ру</td><td class="form-cell">самова́рам</td></tr>
+            <tr><td><span class="case-ru">Винительный</span><span class="case-en-sub">Accusative</span></td><td><span class="q-words">Кого́? Что? (вижу что? / кого?)</span><span class="q-words-en">Whom? What? (see what? / whom?)</span></td><td class="form-cell">самова́р</td><td class="form-cell">самова́ры</td></tr>
+            <tr><td><span class="case-ru">Творительный</span><span class="case-en-sub">Instrumental</span></td><td><span class="q-words">Кем? Чем? (с чем? / с кем?)</span><span class="q-words-en">By whom? With what? (with what? / with whom?)</span></td><td class="form-cell">самова́ром</td><td class="form-cell">самова́рами</td></tr>
+            <tr><td><span class="case-ru">Предложный</span><span class="case-en-sub">Prepositional</span></td><td><span class="q-words">О ком? О чём? (о ком? / о чём?)</span><span class="q-words-en">About whom? About what?</span></td><td class="form-cell">о самова́ре</td><td class="form-cell">о самова́рах</td></tr>
+          </tbody>
+        </table>
+        <div class="table-note">※ Слово используется только в мужском роде. Формы женского и среднего рода отсутствуют.</div>
+      </div></div>
+    </div>
     
-    <div class="g-card blue-strip word-card"><div class="word-head"><div><div class="word-ru">Управля́ющий</div><div class="word-en">manager / steward</div></div><span class="word-tag">сущ. м.р.</span></div><div class="seg"><div class="seg-label">Значение</div><div class="seg-content">Человек, который управляет имением.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«...стоя́л управля́ющий гра́фа Урбе́нин.»</div></div></div>
+    <!-- СЛОВО 4: управляющий (существительное, одушевлённое) -->
+    <div class="g-card blue-strip word-card">
+      <div class="word-head"><div><div class="word-ru">Управля́ющий</div><div class="word-en">manager / steward</div></div><span class="word-tag">СУЩ.</span></div>
+      <div class="seg"><div class="seg-label">Значение · Meaning</div><div class="seg-content">Человек, который управляет имением или предприятием.</div></div>
+      <div class="seg"><div class="seg-label">В тексте · In the text</div><div class="seg-content">«...стоя́л управля́ющий гра́фа Урбе́нин.» (управляющий имением — estate manager)</div></div>
+      <div class="seg"><div class="seg-label">Склонение · Declension (мужской род)</div><div class="seg-content decl-wrap">
+        <table class="decl">
+          <thead>
+            <tr><th rowspan="2">Падеж</th><th rowspan="2">Вопрос · Question</th><th colspan="2">Форма · Form</th></tr>
+            <tr><th class="form-header">Ед. ч. · Singular</th><th class="form-header">Мн. ч. · Plural</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="case-ru">Именительный</span><span class="case-en-sub">Nominative</span></td><td><span class="q-words">Кто?</span><span class="q-words-en">Who?</span></td><td class="form-cell">управля́ющий</td><td class="form-cell">управля́ющие</td></tr>
+            <tr><td><span class="case-ru">Родительный</span><span class="case-en-sub">Genitive</span></td><td><span class="q-words">Кого́? (откуда? без кого?)</span><span class="q-words-en">Whom? (from where? without whom?)</span></td><td class="form-cell">управля́ющего</td><td class="form-cell">управля́ющих</td></tr>
+            <tr><td><span class="case-ru">Дательный</span><span class="case-en-sub">Dative</span></td><td><span class="q-words">Кому́? (к кому?)</span><span class="q-words-en">To whom? (towards whom?)</span></td><td class="form-cell">управля́ющему</td><td class="form-cell">управля́ющим</td></tr>
+            <tr><td><span class="case-ru">Винительный</span><span class="case-en-sub">Accusative</span></td><td><span class="q-words">Кого́? (вижу кого?)</span><span class="q-words-en">Whom? (see whom?)</span></td><td class="form-cell">управля́ющего</td><td class="form-cell">управля́ющих</td></tr>
+            <tr><td><span class="case-ru">Творительный</span><span class="case-en-sub">Instrumental</span></td><td><span class="q-words">Кем? (с кем?)</span><span class="q-words-en">By whom? (with whom?)</span></td><td class="form-cell">управля́ющим</td><td class="form-cell">управля́ющими</td></tr>
+            <tr><td><span class="case-ru">Предложный</span><span class="case-en-sub">Prepositional</span></td><td><span class="q-words">О ком? (о ком?)</span><span class="q-words-en">About whom?</span></td><td class="form-cell">об управля́ющем</td><td class="form-cell">об управля́ющих</td></tr>
+          </tbody>
+        </table>
+        <div class="table-note">※ Слово относится к мужскому роду (одушевлённое). Женский род — управля́ющая (имеет то же значение: женщина-управляющий).</div>
+      </div></div>
+    </div>
     
-    <div class="g-card blue-strip word-card"><div class="word-head"><div><div class="word-ru">Усы́</div><div class="word-en">moustache</div></div><span class="word-tag">сущ. мн.ч.</span></div><div class="seg"><div class="seg-label">Значение</div><div class="seg-content">Волосы над верхней губой.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«...како́й-то то́лстый челове́к с дли́нными уса́ми.»</div></div></div>
+    <!-- СЛОВО 5: усы / ус (множественное число с формой ед.ч.) -->
+    <div class="g-card blue-strip word-card">
+      <div class="word-head"><div><div class="word-ru">Усы́ / Ус</div><div class="word-en">moustache (pl.) / moustache hair (sing.)</div></div><span class="word-tag">СУЩ.</span></div>
+      <div class="seg"><div class="seg-label">Значение · Meaning</div><div class="seg-content">Волосяной покров над верхней губой. Во множественном числе — целые усы, в единственном — один волосок уса.</div></div>
+      <div class="seg"><div class="seg-label">В тексте · In the text</div><div class="seg-content">«...како́й-то то́лстый челове́к с дли́нными уса́ми.» (человек с усами — man with a moustache)</div></div>
+      <div class="seg"><div class="seg-label">Склонение · Declension (мужской род)</div><div class="seg-content decl-wrap">
+        <table class="decl">
+          <thead>
+            <tr><th rowspan="2">Падеж</th><th rowspan="2">Вопрос · Question</th><th colspan="2">Форма · Form</th></tr>
+            <tr><th class="form-header">Ед. ч. · Singular (ус)</th><th class="form-header">Мн. ч. · Plural (усы)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="case-ru">Именительный</span><span class="case-en-sub">Nominative</span></td><td><span class="q-words">Что?</span><span class="q-words-en">What?</span></td><td class="form-cell">ус</td><td class="form-cell">усы́</td></tr>
+            <tr><td><span class="case-ru">Родительный</span><span class="case-en-sub">Genitive</span></td><td><span class="q-words">Чего́? (откуда? без чего?)</span><span class="q-words-en">Of what? (from where? without what?)</span></td><td class="form-cell">у́са</td><td class="form-cell">усо́в</td></tr>
+            <tr><td><span class="case-ru">Дательный</span><span class="case-en-sub">Dative</span></td><td><span class="q-words">Чему́? (к чему?)</span><span class="q-words-en">To what? (towards what?)</span></td><td class="form-cell">у́су</td><td class="form-cell">уса́м</td></tr>
+            <tr><td><span class="case-ru">Винительный</span><span class="case-en-sub">Accusative</span></td><td><span class="q-words">Что? (вижу что?)</span><span class="q-words-en">What? (see what?)</span></td><td class="form-cell">ус</td><td class="form-cell">усы́</td></tr>
+            <tr><td><span class="case-ru">Творительный</span><span class="case-en-sub">Instrumental</span></td><td><span class="q-words">Чем? (с чем?)</span><span class="q-words-en">With what? (with what?)</span></td><td class="form-cell">у́сом</td><td class="form-cell">уса́ми</td></tr>
+            <tr><td><span class="case-ru">Предложный</span><span class="case-en-sub">Prepositional</span></td><td><span class="q-words">О чём? (о чём?)</span><span class="q-words-en">About what?</span></td><td class="form-cell">об у́се</td><td class="form-cell">об уса́х</td></tr>
+          </tbody>
+        </table>
+        <div class="table-note">※ В русском языке форма множественного числа «усы» употребляется значительно чаще. Единственное число «ус» обозначает один волосок уса.</div>
+      </div></div>
+    </div>
   </div>
 
+  <!-- ========== ФРАЗЫ ========== -->
   <div id="phrases" class="section">
     <div class="sec-label"><h2>Фразы из текста</h2><span class="pill">3 phrases</span></div>
-    
-    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">никто́ не встреча́л</div><div class="phrase-en">nobody met</div></div><span class="phrase-type">отсутствие действия</span></div><div class="seg"><div class="seg-label">Объяснение</div><div class="seg-content">Конструкция: никто + НЕ + глагол. Означает, что действие не совершалось.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«Серге́й въе́хал в уса́дьбу гра́фа. Никто́ его́ не встреча́л.»</div></div></div>
-    
-    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">в до́ме никого́ не бы́ло</div><div class="phrase-en">there was nobody</div></div><span class="phrase-type">отсутствие людей</span></div><div class="seg"><div class="seg-label">Объяснение</div><div class="seg-content">Указывает на полное отсутствие людей в месте.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«Все две́ри бы́ли откры́ты, но в до́ме никого́ не бы́ло.»</div></div></div>
-    
-    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">не о́чень далеко́ от</div><div class="phrase-en">not very far from</div></div><span class="phrase-type">приблизительное расстояние</span></div><div class="seg"><div class="seg-label">Объяснение</div><div class="seg-content">Указывает на небольшое, но не точное расстояние.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«Не о́чень далеко́ от стола́ стоя́л управля́ющий.»</div></div></div>
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Никто́ не встреча́л</div><div class="phrase-en">nobody met</div></div><span class="phrase-type">отсутствие действия</span></div><div class="seg"><div class="seg-label">Объяснение</div><div class="seg-content">Конструкция: никто + НЕ + глагол.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«Серге́й въе́хал в уса́дьбу гра́фа. Никто́ его́ не встреча́л.»</div></div></div>
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">В до́ме никого́ не бы́ло</div><div class="phrase-en">there was nobody</div></div><span class="phrase-type">отсутствие людей</span></div><div class="seg"><div class="seg-label">Объяснение</div><div class="seg-content">Указывает на полное отсутствие людей.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«Все две́ри бы́ли откры́ты, но в до́ме никого́ не бы́ло.»</div></div></div>
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Не о́чень далеко́ от</div><div class="phrase-en">not very far from</div></div><span class="phrase-type">приблизительное расстояние</span></div><div class="seg"><div class="seg-label">Объяснение</div><div class="seg-content">Указывает на небольшое расстояние.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«Не о́чень далеко́ от стола́ стоя́л управля́ющий.»</div></div></div>
   </div>
 
+  <!-- ========== ЗАДАНИЯ ========== -->
   <div id="hw" class="section">
     <div class="sec-label"><h2>Часть 1: Грамматика</h2><span class="pill">Grammar</span></div>
     <div class="g-card blue-strip grammar-topic">📌 <strong class="t">Тема: Винительный падеж — Кого? Что?</strong><br>В тексте: <em class="ex">«встреча́л (кого?) Серге́я», «пил (что?) чай», «уви́дел (что?) самова́р»</em>.<br><strong class="r">Правило:</strong> после глаголов действия → Винительный падеж.</div>
-
-    <div class="g-card blue-strip ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-title">Поставьте слово в Винительном падеже</div></div><div class="ex-body"><ol>
-      <li>Серге́й уви́дел <span class="blank"></span> (самова́р)</li>
-      <li>Граф носи́л <span class="blank"></span> (соло́менная шля́па)</li>
-      <li>Слуга́ не встре́тил <span class="blank"></span> (управля́ющий)</li>
-      <li>Я ви́жу <span class="blank"></span> (дли́нные усы́)</li>
-      <li>Она́ купи́ла <span class="blank"></span> (мра́морная терра́са)</li>
-    </ol></div></div>
-
+    <div class="g-card blue-strip ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-title">Поставьте слово в Винительном падеже</div></div><div class="ex-body"><ol><li>Серге́й уви́дел <span class="blank"></span> (самова́р)</li><li>Граф носи́л <span class="blank"></span> (соло́менная шля́па)</li><li>Слуга́ не встре́тил <span class="blank"></span> (управля́ющий)</li><li>Я ви́жу <span class="blank"></span> (дли́нные усы́)</li><li>Она́ купи́ла <span class="blank"></span> (мра́морная терра́са)</li></ol></div></div>
     <div class="sec-label"><h2>Часть 2: Вопросы «Да / Нет»</h2><span class="pill">Yes / No</span></div>
     <div class="q-block"><div class="q-item">🔵 1. Сергея кто-то встречал в усадьбе?</div><div class="q-item">🔵 2. Граф сидел в саду в соломенной шляпе?</div><div class="q-item">🔵 3. Толстый человек пил чай из самовара?</div><div class="q-item">🔵 4. Управляющий стоял очень далеко от стола?</div><div class="q-item">🔵 5. Рядом с управляющим стоял слуга?</div></div>
-
     <div class="sec-label"><h2>Часть 3: Открытые вопросы</h2><span class="pill">Open questions</span></div>
     <div class="q-block"><div class="q-item">🟡 1. Что увидел Сергей под белыми акациями?</div><div class="q-item">🟡 2. Во что был одет граф?</div><div class="q-item">🟡 3. Что делал толстый человек с длинными усами?</div><div class="q-item">🟡 4. Кто стоял не очень далеко от стола?</div><div class="q-item">🟡 5. Кто стоял рядом с управляющим?</div></div>
-
     <div class="sec-label"><h2>Часть 4: Обсуждение</h2><span class="pill">Discussion</span></div>
     <div class="q-block"><div class="q-item">🗣️ 1. Что значит «никто не встречал» в вашей культуре?</div><div class="q-item">🗣️ 2. Самовар — символ России. А что символизирует чай в вашей стране?</div><div class="q-item">🗣️ 3. Почему граф надел соломенную шляпу в саду?</div></div>
   </div>
 
+  <!-- ========== ОТВЕТЫ ========== -->
   <div id="answers" class="section">
     <div class="sec-label"><h2>Ответы к заданиям</h2><span class="pill">Answers</span></div>
-    
-    <div class="g-card ans-strip ans-card"><div class="ans-head">Упражнение 1 — Винительный падеж</div><div class="ans-body"><ol>
-      <li><strong>самова́р</strong> <span class="ans-dim">(м.р. неодуш. → без изменений)</span></li>
-      <li><strong>соло́менную шля́пу</strong> <span class="ans-dim">(ж.р. → -у)</span></li>
-      <li><strong>управля́ющего</strong> <span class="ans-dim">(м.р. одуш. → -его/-а)</span></li>
-      <li><strong>усы́</strong> <span class="ans-dim">(мн.ч., неодуш. → без изменений)</span></li>
-      <li><strong>мра́морную терра́су</strong> <span class="ans-dim">(ж.р. → -у)</span></li>
-    </ol></div></div>
-
-    <div class="g-card ans-strip ans-card"><div class="ans-head">Вопросы «Да / Нет» (Ответы)</div><div class="ans-body"><ol>
-      <li><span class="ans-no">Нет</span> — никто его не встречал.</li>
-      <li><span class="ans-yes">Да</span> — он сидел в соломенной шляпе.</li>
-      <li><span class="ans-no">Нет</span> — он пил минеральную воду.</li>
-      <li><span class="ans-no">Нет</span> — он стоял не очень далеко.</li>
-      <li><span class="ans-yes">Да</span> — слуга стоял рядом с управляющим.</li>
-    </ol></div></div>
-
-    <div class="g-card ans-strip ans-card"><div class="ans-head">Открытые вопросы (Краткие ответы)</div><div class="ans-body"><ol>
-      <li>Сергей увидел стол с самоваром.</li>
-      <li>Граф был в халате и в соломенной шляпе.</li>
-      <li>Он пил минеральную воду.</li>
-      <li>Управляющий Урбенин.</li>
-      <li>Рядом с управляющим стоял слуга.</li>
-    </ol></div></div>
-    
-    <div class="g-card ans-strip ans-card"><div class="ans-head">Обсуждение (Заметки)</div><div class="ans-body" style="color:var(--text-dim);">Открытые вопросы для свободной беседы. Поощряйте развёрнутые ответы.</div></div>
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Упражнение 1 — Винительный падеж</div><div class="ans-body"><ol><li><strong>самова́р</strong> <span class="ans-dim">(м.р. неодуш.)</span></li><li><strong>соло́менную шля́пу</strong> <span class="ans-dim">(ж.р. → -у)</span></li><li><strong>управля́ющего</strong> <span class="ans-dim">(м.р. одуш.)</span></li><li><strong>усы́</strong> <span class="ans-dim">(мн.ч.)</span></li><li><strong>мра́морную терра́су</strong> <span class="ans-dim">(ж.р. → -у)</span></li></ol></div></div>
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Вопросы «Да / Нет» (Ответы)</div><div class="ans-body"><ol><li><span class="ans-no">Нет</span> — никто его не встречал.</li><li><span class="ans-yes">Да</span> — он сидел в соломенной шляпе.</li><li><span class="ans-no">Нет</span> — он пил минеральную воду.</li><li><span class="ans-no">Нет</span> — он стоял не очень далеко.</li><li><span class="ans-yes">Да</span> — слуга стоял рядом с управляющим.</li></ol></div></div>
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Открытые вопросы (Краткие ответы)</div><div class="ans-body"><ol><li>Сергей увидел стол с самоваром.</li><li>Граф был в халате и в соломенной шляпе.</li><li>Он пил минеральную воду.</li><li>Управляющий Урбенин.</li><li>Рядом с управляющим стоял слуга.</li></ol></div></div>
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Обсуждение (Заметки)</div><div class="ans-body" style="color:var(--text-dim);">Открытые вопросы для свободной беседы.</div></div>
   </div>
 </main>
 <footer>Русский язык с Александром · Nina Andrew · А.П. Чехов «Дра́ма на охо́те» · A2</footer>
