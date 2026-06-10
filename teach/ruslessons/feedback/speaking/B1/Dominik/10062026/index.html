@@ -163,6 +163,9 @@
   .q-item{background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.20);border-radius:var(--radius-sm);backdrop-filter:blur(18px);padding:0.7rem 1rem;margin-bottom:0.55rem;font-size:clamp(13px,4vw,14px);line-height:1.5;}
   
   footer{text-align:center;padding:1.5rem;font-size:clamp(10px,3vw,12px);color:var(--text-dim);border-top:1px solid rgba(255,255,255,.07);}
+  
+  /* Стиль для желтых местоимений в шапке таблицы */
+  .pronoun-header { color: #FFD700; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -253,9 +256,9 @@
       <div class="header-card">
         <div class="h-title">Русский язык<br><span>с Александром</span></div>
         <div class="badge-container">
-          <span class="h-badge">👤 Студент: Domíník</span>
+          <span class="h-badge">👤 Студент: Dominik</span>
           <span class="h-badge">🎓 Уровень: B • 1</span>
-          <span class="h-badge">📖 Те́ма: «Тра́нспорт»</span>
+          <span class="h-badge">📖 Тема: «Транспорт»</span>
         </div>
       </div>
     </div>
@@ -278,38 +281,38 @@
   <!-- ===================== РАЗДЕЛ "СЛОВА" ===================== -->
   <div id="words" class="section active">
     
-    <div class="sec-label"><h2>Слова́ уро́ка</h2><span class="pill">7 new words</span></div>
+    <div class="sec-label"><h2>Слова урока</h2><span class="pill">Lesson's words</span></div>
     
     <!-- СЛОВО 1: Башня -->
     <div class="g-card blue-strip word-card">
       <div class="word-head"><div><div class="word-ru">Ба́шня</div><div class="word-en">tower</div></div><span class="word-tag">СУЩ. • noun</span></div>
-      <div class="seg"><div class="seg-label">Значе́ние • Meaning</div><div class="seg-content">Высо́кое у́зкое архитекту́рное сооружение.</div></div>
-      <div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«Мы уви́дели высо́кую ба́шню в це́нтре го́рода.» (We saw a tall tower in the city center)</div></div>
-      <div class="seg"><div class="seg-label">Склоне́ние • Declension</div><div class="seg-content decl-wrap">
-        <div class="decl-caption">РОД • GENDER: же́нский род • feminine</div>
+      <div class="seg"><div class="seg-label">Значение • Meaning</div><div class="seg-content">Высокое узкое архитектурное сооружение.</div></div>
+      <div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«Мы увидели высокую башню в центре города.» (We saw a tall tower in the city center)</div></div>
+      <div class="seg"><div class="seg-label">Склонение • Declension</div><div class="seg-content decl-wrap">
+        <div class="decl-caption">РОД • GENDER: женский род • feminine</div>
         <table class="decl">
           <thead>
-            <tr><th>Паде́ж • Case</th><th>Вопро́сы • Questions</th><th>Ед. ч. • Singular</th><th>Мн. ч. • Plural</th></tr>
+            <tr><th>Падеж • Case</th><th>Вопросы • Questions</th><th>Ед. ч. • Singular</th><th>Мн. ч. • Plural</th></tr>
           </thead>
           <tbody>
-            <tr><td class="form-cell">Имени́тельный<br><span class="case-en-sub">Nominative</span></td>
+            <tr><td class="form-cell">Именительный<br><span class="case-en-sub">Nominative</span></td>
             <td class="form-cell"><span class="q-words">Кто? Что?</span><span class="q-words-en">Who? What?</span></td>
-            <td class="form-cell">ба́шня</td><td class="form-cell">ба́шни</td></tr>
-            <tr><td class="form-cell">Роди́тельный<br><span class="case-en-sub">Genitive</span></td>
-            <td class="form-cell"><span class="q-words">Кого́? Чего́? (отку́да? без чего́?)</span><span class="q-words-en">Whom? Of what? (from where? without what?)</span></td>
-            <td class="form-cell">ба́шни</td><td class="form-cell">ба́шен</td></tr>
-            <tr><td class="form-cell">Да́тельный<br><span class="case-en-sub">Dative</span></td>
-            <td class="form-cell"><span class="q-words">Кому́? Чему́? (к чему́?)</span><span class="q-words-en">To whom? To what? (towards what?)</span></td>
-            <td class="form-cell">ба́шне</td><td class="form-cell">ба́шням</td></tr>
-            <tr><td class="form-cell">Вини́тельный<br><span class="case-en-sub">Accusative</span></td>
-            <td class="form-cell"><span class="q-words">Кого́? Что? (ви́жу что́?)</span><span class="q-words-en">Whom? What? (see what?)</span></td>
-            <td class="form-cell">ба́шню</td><td class="form-cell">ба́шни</td></tr>
-            <tr><td class="form-cell">Твори́тельный<br><span class="case-en-sub">Instrumental</span></td>
+            <td class="form-cell">башня</td><td class="form-cell">башни</td></tr>
+            <tr><td class="form-cell">Родительный<br><span class="case-en-sub">Genitive</span></td>
+            <td class="form-cell"><span class="q-words">Кого? Чего? (откуда? без чего?)</span><span class="q-words-en">Whom? Of what? (from where? without what?)</span></td>
+            <td class="form-cell">башни</td><td class="form-cell">башен</td></tr>
+            <tr><td class="form-cell">Дательный<br><span class="case-en-sub">Dative</span></td>
+            <td class="form-cell"><span class="q-words">Кому? Чему? (к чему?)</span><span class="q-words-en">To whom? To what? (towards what?)</span></td>
+            <td class="form-cell">башне</td><td class="form-cell">башням</td></tr>
+            <tr><td class="form-cell">Винительный<br><span class="case-en-sub">Accusative</span></td>
+            <td class="form-cell"><span class="q-words">Кого? Что? (вижу что?)</span><span class="q-words-en">Whom? What? (see what?)</span></td>
+            <td class="form-cell">башню</td><td class="form-cell">башни</td></tr>
+            <tr><td class="form-cell">Творительный<br><span class="case-en-sub">Instrumental</span></td>
             <td class="form-cell"><span class="q-words">Кем? Чем? (с чем?)</span><span class="q-words-en">By whom? With what? (with what?)</span></td>
-            <td class="form-cell">ба́шней</td><td class="form-cell">ба́шнями</td></tr>
-            <tr><td class="form-cell">Предло́жный<br><span class="case-en-sub">Prepositional</span></td>
+            <td class="form-cell">башней</td><td class="form-cell">башнями</td></tr>
+            <tr><td class="form-cell">Предложный<br><span class="case-en-sub">Prepositional</span></td>
             <td class="form-cell"><span class="q-words">О ком? О чём? (о чём?)</span><span class="q-words-en">About whom? About what? (about what?)</span></td>
-            <td class="form-cell">о ба́шне</td><td class="form-cell">о ба́шнях</td></tr>
+            <td class="form-cell">о башне</td><td class="form-cell">о башнях</td></tr>
           </tbody>
         </table>
       </div></div>
@@ -318,27 +321,27 @@
     <!-- СЛОВО 2: Ездить -->
     <div class="g-card blue-strip word-card">
       <div class="word-head"><div><div class="word-ru">Е́здить</div><div class="word-en">to go (by transport)</div></div><span class="word-tag">ГЛАГОЛ • verb</span></div>
-      <div class="seg"><div class="seg-label">Значе́ние • Meaning</div><div class="seg-content">Передвига́ться с по́мощью тра́нспорта.</div></div>
-      <div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«Я люблю́ е́здить на трамва́е.» (I like to ride the tram)</div></div>
-      <div class="seg"><div class="seg-label">Спряже́ние • Conjugation</div><div class="seg-content decl-wrap">
+      <div class="seg"><div class="seg-label">Значение • Meaning</div><div class="seg-content">Передвигаться с помощью транспорта.</div></div>
+      <div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«Я люблю ездить на трамвае.» (I like to ride the tram)</div></div>
+      <div class="seg"><div class="seg-label">Формы глаголов • Verbs forms</div><div class="seg-content decl-wrap">
         <div class="decl-caption">ГЛАГОЛ «ЕЗДИТЬ»</div>
         <table class="decl">
           <thead>
-            <tr><th>Вре́мя • Tense</th><th>Вопро́сы • Questions</th><th>Ед. число́ (Я / Ты) • муж. / жен. род</th><th>Мн. число́ (Мы / Они)</th></tr>
+            <tr><th>Время • Tense</th><th>Вопросы • Questions</th><th>Ед. число <span class="pronoun-header">(Я / Ты)</span> • муж. / жен. род</th><th>Мн. число <span class="pronoun-header">(Мы / Они)</span></th></tr>
           </thead>
           <tbody>
-            <tr><td class="form-cell">Бу́дущее<br><span class="case-en-sub">Future</span></td>
-            <td class="form-cell"><span class="q-words">Что сде́лаю? Что бу́ду де́лать?</span><span class="q-words-en">What will I do? What will I do?</span></td>
-            <td class="form-cell"><span style="color:#FFD700;">я</span> бу́ду е́здить / <span style="color:#FFD700;">ты</span> бу́дешь е́здить</td>
-            <td class="form-cell"><span style="color:#FFD700;">мы</span> бу́дем е́здить / <span style="color:#FFD700;">они</span> бу́дут е́здить</td></tr>
-            <tr><td class="form-cell">Настоя́щее<br><span class="case-en-sub">Present</span></td>
-            <td class="form-cell"><span class="q-words">Что де́лаю?</span><span class="q-words-en">What do I do?</span></td>
-            <td class="form-cell"><span style="color:#FFD700;">я</span> е́зжу / <span style="color:#FFD700;">ты</span> е́здишь</td>
-            <td class="form-cell"><span style="color:#FFD700;">мы</span> е́здим / <span style="color:#FFD700;">они</span> е́здят</td></tr>
-            <tr><td class="form-cell">Проше́дшее<br><span class="case-en-sub">Past</span></td>
-            <td class="form-cell"><span class="q-words">Что де́лал? Что сде́лал?</span><span class="q-words-en">What did (he) do? What did (he) do?</span></td>
-            <td class="form-cell"><span style="color:#FFD700;">я</span> е́здил / <span style="color:#FFD700;">я</span> е́здила</td>
-            <td class="form-cell"><span style="color:#FFD700;">мы</span> е́здили / <span style="color:#FFD700;">они</span> е́здили</td></tr>
+            <tr><td class="form-cell">Будущее<br><span class="case-en-sub">Future</span></td>
+            <td class="form-cell"><span class="q-words">Что сделаю? Что буду делать?</span><span class="q-words-en">What will I do? What will I do?</span></td>
+            <td class="form-cell">я буду ездить / ты будешь ездить</td>
+            <td class="form-cell">мы будем ездить / они будут ездить</td></tr>
+            <tr><td class="form-cell">Настоящее<br><span class="case-en-sub">Present</span></td>
+            <td class="form-cell"><span class="q-words">Что делаю?</span><span class="q-words-en">What do I do?</span></td>
+            <td class="form-cell">я езжу / ты ездишь</td>
+            <td class="form-cell">мы ездим / они ездят</td></tr>
+            <tr><td class="form-cell">Прошедшее<br><span class="case-en-sub">Past</span></td>
+            <td class="form-cell"><span class="q-words">Что делал? Что сделал?</span><span class="q-words-en">What did (he) do? What did (he) do?</span></td>
+            <td class="form-cell">я ездил / я ездила</td>
+            <td class="form-cell">мы ездили / они ездили</td></tr>
           </tbody>
         </table>
       </div></div>
@@ -347,27 +350,27 @@
     <!-- СЛОВО 3: Разочаровываться -->
     <div class="g-card blue-strip word-card">
       <div class="word-head"><div><div class="word-ru">Разочаро́вываться</div><div class="word-en">to be disappointed</div></div><span class="word-tag">ГЛАГОЛ • verb</span></div>
-      <div class="seg"><div class="seg-label">Значе́ние • Meaning</div><div class="seg-content">Теря́ть ве́ру во что́-то и́ли кого́-то.</div></div>
-      <div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«Не сто́ит разочаро́вываться из-за мелоче́й.» (Don't be disappointed because of little things)</div></div>
-      <div class="seg"><div class="seg-label">Спряже́ние • Conjugation</div><div class="seg-content decl-wrap">
+      <div class="seg"><div class="seg-label">Значение • Meaning</div><div class="seg-content">Терять веру во что-то или кого-то.</div></div>
+      <div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«Не стоит разочаровываться из-за мелочей.» (Don't be disappointed because of little things)</div></div>
+      <div class="seg"><div class="seg-label">Формы глаголов • Verbs forms</div><div class="seg-content decl-wrap">
         <div class="decl-caption">ГЛАГОЛ «РАЗОЧАРОВЫВАТЬСЯ»</div>
         <table class="decl">
           <thead>
-            <tr><th>Вре́мя • Tense</th><th>Вопро́сы • Questions</th><th>Ед. число́ (Я / Ты) • муж. / жен. род</th><th>Мн. число́ (Мы / Они)</th></tr>
+            <tr><th>Время • Tense</th><th>Вопросы • Questions</th><th>Ед. число <span class="pronoun-header">(Я / Ты)</span> • муж. / жен. род</th><th>Мн. число <span class="pronoun-header">(Мы / Они)</span></th></tr>
           </thead>
           <tbody>
-            <tr><td class="form-cell">Бу́дущее<br><span class="case-en-sub">Future</span></td>
-            <td class="form-cell"><span class="q-words">Что сде́лаю? Что бу́ду де́лать?</span><span class="q-words-en">What will I do? What will I do?</span></td>
-            <td class="form-cell"><span style="color:#FFD700;">я</span> бу́ду разочаро́вываться / <span style="color:#FFD700;">ты</span> бу́дешь разочаро́вываться</td>
-            <td class="form-cell"><span style="color:#FFD700;">мы</span> бу́дем разочаро́вываться / <span style="color:#FFD700;">они</span> бу́дут разочаро́вываться</td></tr>
-            <tr><td class="form-cell">Настоя́щее<br><span class="case-en-sub">Present</span></td>
-            <td class="form-cell"><span class="q-words">Что де́лаю?</span><span class="q-words-en">What do I do?</span></td>
-            <td class="form-cell"><span style="color:#FFD700;">я</span> разочаро́вываюсь / <span style="color:#FFD700;">ты</span> разочаро́вываешься</td>
-            <td class="form-cell"><span style="color:#FFD700;">мы</span> разочаро́вываемся / <span style="color:#FFD700;">они</span> разочаро́вываются</td></tr>
-            <tr><td class="form-cell">Проше́дшее<br><span class="case-en-sub">Past</span></td>
-            <td class="form-cell"><span class="q-words">Что де́лал? Что сде́лал?</span><span class="q-words-en">What did (he) do? What did (he) do?</span></td>
-            <td class="form-cell"><span style="color:#FFD700;">я</span> разочаро́вывался / <span style="color:#FFD700;">я</span> разочаро́вывалась</td>
-            <td class="form-cell"><span style="color:#FFD700;">мы</span> разочаро́вывались / <span style="color:#FFD700;">они</span> разочаро́вывались</td></tr>
+            <tr><td class="form-cell">Будущее<br><span class="case-en-sub">Future</span></td>
+            <td class="form-cell"><span class="q-words">Что сделаю? Что буду делать?</span><span class="q-words-en">What will I do? What will I do?</span></td>
+            <td class="form-cell">я буду разочаровываться / ты будешь разочаровываться</td>
+            <td class="form-cell">мы будем разочаровываться / они будут разочаровываться</td></tr>
+            <tr><td class="form-cell">Настоящее<br><span class="case-en-sub">Present</span></td>
+            <td class="form-cell"><span class="q-words">Что делаю?</span><span class="q-words-en">What do I do?</span></td>
+            <td class="form-cell">я разочаровываюсь / ты разочаровываешься</td>
+            <td class="form-cell">мы разочаровываемся / они разочаровываются</td></tr>
+            <tr><td class="form-cell">Прошедшее<br><span class="case-en-sub">Past</span></td>
+            <td class="form-cell"><span class="q-words">Что делал? Что сделал?</span><span class="q-words-en">What did (he) do? What did (he) do?</span></td>
+            <td class="form-cell">я разочаровывался / я разочаровывалась</td>
+            <td class="form-cell">мы разочаровывались / они разочаровывались</td></tr>
           </tbody>
         </table>
       </div></div>
@@ -376,31 +379,31 @@
     <!-- СЛОВО 4: Токоприёмник -->
     <div class="g-card blue-strip word-card">
       <div class="word-head"><div><div class="word-ru">Токоприёмник</div><div class="word-en">pantograph (current collector)</div></div><span class="word-tag">СУЩ. • noun</span></div>
-      <div class="seg"><div class="seg-label">Значе́ние • Meaning</div><div class="seg-content">Устро́йство для сбо́ра электри́ческого то́ка с конта́ктной се́ти.</div></div>
-      <div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«Токоприёмник трамва́я и́скрил на поворо́те.» (The tram's pantograph sparked on the turn)</div></div>
-      <div class="seg"><div class="seg-label">Склоне́ние • Declension</div><div class="seg-content decl-wrap">
-        <div class="decl-caption">РОД • GENDER: мужско́й род • masculine</div>
+      <div class="seg"><div class="seg-label">Значение • Meaning</div><div class="seg-content">Устройство для сбора электрического тока с контактной сети.</div></div>
+      <div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«Токоприёмник трамвая искрил на повороте.» (The tram's pantograph sparked on the turn)</div></div>
+      <div class="seg"><div class="seg-label">Склонение • Declension</div><div class="seg-content decl-wrap">
+        <div class="decl-caption">РОД • GENDER: мужской род • masculine</div>
         <table class="decl">
           <thead>
-            <tr><th>Паде́ж • Case</th><th>Вопро́сы • Questions</th><th>Ед. ч. • Singular</th><th>Мн. ч. • Plural</th></tr>
+            <tr><th>Падеж • Case</th><th>Вопросы • Questions</th><th>Ед. ч. • Singular</th><th>Мн. ч. • Plural</th></tr>
           </thead>
           <tbody>
-            <tr><td class="form-cell">Имени́тельный<br><span class="case-en-sub">Nominative</span></td>
+            <tr><td class="form-cell">Именительный<br><span class="case-en-sub">Nominative</span></td>
             <td class="form-cell"><span class="q-words">Кто? Что?</span><span class="q-words-en">Who? What?</span></td>
             <td class="form-cell">токоприёмник</td><td class="form-cell">токоприёмники</td></tr>
-            <tr><td class="form-cell">Роди́тельный<br><span class="case-en-sub">Genitive</span></td>
-            <td class="form-cell"><span class="q-words">Кого́? Чего́? (отку́да? без чего́?)</span><span class="q-words-en">Whom? Of what? (from where? without what?)</span></td>
+            <tr><td class="form-cell">Родительный<br><span class="case-en-sub">Genitive</span></td>
+            <td class="form-cell"><span class="q-words">Кого? Чего? (откуда? без чего?)</span><span class="q-words-en">Whom? Of what? (from where? without what?)</span></td>
             <td class="form-cell">токоприёмника</td><td class="form-cell">токоприёмников</td></tr>
-            <tr><td class="form-cell">Да́тельный<br><span class="case-en-sub">Dative</span></td>
-            <td class="form-cell"><span class="q-words">Кому́? Чему́? (к чему́?)</span><span class="q-words-en">To whom? To what? (towards what?)</span></td>
+            <tr><td class="form-cell">Дательный<br><span class="case-en-sub">Dative</span></td>
+            <td class="form-cell"><span class="q-words">Кому? Чему? (к чему?)</span><span class="q-words-en">To whom? To what? (towards what?)</span></td>
             <td class="form-cell">токоприёмнику</td><td class="form-cell">токоприёмникам</td></tr>
-            <tr><td class="form-cell">Вини́тельный<br><span class="case-en-sub">Accusative</span></td>
-            <td class="form-cell"><span class="q-words">Кого́? Что? (ви́жу что́?)</span><span class="q-words-en">Whom? What? (see what?)</span></td>
-            <td class="form-cell">токоприёмник</td><td class="form-cell">токоприёмники</td><tr>
-            <tr><td class="form-cell">Твори́тельный<br><span class="case-en-sub">Instrumental</span></td>
+            <tr><td class="form-cell">Винительный<br><span class="case-en-sub">Accusative</span></td>
+            <td class="form-cell"><span class="q-words">Кого? Что? (вижу что?)</span><span class="q-words-en">Whom? What? (see what?)</span></td>
+            <td class="form-cell">токоприёмник</td><td class="form-cell">токоприёмники</td></tr>
+            <tr><td class="form-cell">Творительный<br><span class="case-en-sub">Instrumental</span></td>
             <td class="form-cell"><span class="q-words">Кем? Чем? (с чем?)</span><span class="q-words-en">By whom? With what? (with what?)</span></td>
             <td class="form-cell">токоприёмником</td><td class="form-cell">токоприёмниками</td></tr>
-            <tr><td class="form-cell">Предло́жный<br><span class="case-en-sub">Prepositional</span></td>
+            <tr><td class="form-cell">Предложный<br><span class="case-en-sub">Prepositional</span></td>
             <td class="form-cell"><span class="q-words">О ком? О чём? (о чём?)</span><span class="q-words-en">About whom? About what? (about what?)</span></td>
             <td class="form-cell">о токоприёмнике</td><td class="form-cell">о токоприёмниках</td></tr>
           </tbody>
@@ -411,44 +414,68 @@
     <!-- СЛОВО 5: Рога -->
     <div class="g-card blue-strip word-card">
       <div class="word-head"><div><div class="word-ru">Рога́</div><div class="word-en">horns (pl.)</div></div><span class="word-tag">СУЩ. • noun</span></div>
-      <div class="seg"><div class="seg-label">Значе́ние • Meaning</div><div class="seg-content">Токоприёмник трамва́я и́ли тролле́йбуса (в просторе́чии).</div></div>
-      <div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«У трамва́я отвали́лись рога́.» (The tram's horns fell off)</div></div>
-      <div class="seg"><div class="seg-label">Склоне́ние • Declension</div><div class="seg-content decl-wrap">
-        <div class="decl-caption">РОД • GENDER: мно́жественное число́ • plural</div>
+      <div class="seg"><div class="seg-label">Значение • Meaning</div><div class="seg-content">Токоприёмник трамвая или троллейбуса (в просторечии).</div></div>
+      <div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«У трамвая отвалились рога.» (The tram's horns fell off)</div></div>
+      <div class="seg"><div class="seg-label">Склонение • Declension</div><div class="seg-content decl-wrap">
+        <div class="decl-caption">РОД • GENDER: множественное число • plural</div>
         <table class="decl">
           <thead>
-            <tr><th>Паде́ж • Case</th><th>Вопро́сы • Questions</th><th>Мн. ч. • Plural</th></tr>
+            <tr><th>Падеж • Case</th><th>Вопросы • Questions</th><th>Мн. ч. • Plural</th></tr>
           </thead>
           <tbody>
-            <tr><td class="form-cell">Имени́тельный<br><span class="case-en-sub">Nominative</span></td><td class="form-cell"><span class="q-words">Кто? Что?</span><span class="q-words-en">Who? What?</span></td><td class="form-cell">рога́</td></tr>
-            <tr><td class="form-cell">Роди́тельный<br><span class="case-en-sub">Genitive</span></td><td class="form-cell"><span class="q-words">Кого́? Чего́? (отку́да? без чего́?)</span><span class="q-words-en">Whom? Of what? (from where? without what?)</span></td><td class="form-cell">рого́в</td></tr>
-            <tr><td class="form-cell">Да́тельный<br><span class="case-en-sub">Dative</span></td><td class="form-cell"><span class="q-words">Кому́? Чему́? (к чему́?)</span><span class="q-words-en">To whom? To what? (towards what?)</span></td><td class="form-cell">рога́м</td></tr>
-            <tr><td class="form-cell">Вини́тельный<br><span class="case-en-sub">Accusative</span></td><td class="form-cell"><span class="q-words">Кого́? Что? (ви́жу что́?)</span><span class="q-words-en">Whom? What? (see what?)</span></td><td class="form-cell">рога́</td></tr>
-            <tr><td class="form-cell">Твори́тельный<br><span class="case-en-sub">Instrumental</span></td><td class="form-cell"><span class="q-words">Кем? Чем? (с чем?)</span><span class="q-words-en">By whom? With what? (with what?)</span></td><td class="form-cell">рога́ми</td></tr>
-            <tr><td class="form-cell">Предло́жный<br><span class="case-en-sub">Prepositional</span></td><td class="form-cell"><span class="q-words">О ком? О чём? (о чём?)</span><span class="q-words-en">About whom? About what? (about what?)</span></td><td class="form-cell">о рога́х</td></tr>
+            <tr><td class="form-cell">Именительный<br><span class="case-en-sub">Nominative</span></td>
+            <td class="form-cell"><span class="q-words">Кто? Что?</span><span class="q-words-en">Who? What?</span></td>
+            <td class="form-cell">рога</td></tr>
+            <tr><td class="form-cell">Родительный<br><span class="case-en-sub">Genitive</span></td>
+            <td class="form-cell"><span class="q-words">Кого? Чего? (откуда? без чего?)</span><span class="q-words-en">Whom? Of what? (from where? without what?)</span></td>
+            <td class="form-cell">рогов</td></tr>
+            <tr><td class="form-cell">Дательный<br><span class="case-en-sub">Dative</span></td>
+            <td class="form-cell"><span class="q-words">Кому? Чему? (к чему?)</span><span class="q-words-en">To whom? To what? (towards what?)</span></td>
+            <td class="form-cell">рогам</td></tr>
+            <tr><td class="form-cell">Винительный<br><span class="case-en-sub">Accusative</span></td>
+            <td class="form-cell"><span class="q-words">Кого? Что? (вижу что?)</span><span class="q-words-en">Whom? What? (see what?)</span></td>
+            <td class="form-cell">рога</td></tr>
+            <tr><td class="form-cell">Творительный<br><span class="case-en-sub">Instrumental</span></td>
+            <td class="form-cell"><span class="q-words">Кем? Чем? (с чем?)</span><span class="q-words-en">By whom? With what? (with what?)</span></td>
+            <td class="form-cell">рогами</td></tr>
+            <tr><td class="form-cell">Предложный<br><span class="case-en-sub">Prepositional</span></td>
+            <td class="form-cell"><span class="q-words">О ком? О чём? (о чём?)</span><span class="q-words-en">About whom? About what? (about what?)</span></td>
+            <td class="form-cell">о рогах</td></tr>
           </tbody>
         </table>
       </div></div>
     </div>
     
-    <!-- СЛОВО 6: Проездной -->
+    <!-- СЛОВО 6: Проездной (ИСПРАВЛЕНА ТАБЛИЦА) -->
     <div class="g-card blue-strip word-card">
       <div class="word-head"><div><div class="word-ru">Проездно́й</div><div class="word-en">travel pass</div></div><span class="word-tag">СУЩ. • noun</span></div>
-      <div class="seg"><div class="seg-label">Значе́ние • Meaning</div><div class="seg-content">Докуме́нт для беспла́тного и́ли льго́тного прое́зда.</div></div>
-      <div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«Мой проездно́й биле́т зако́нчился.» (My travel pass expired)</div></div>
-      <div class="seg"><div class="seg-label">Склоне́ние • Declension</div><div class="seg-content decl-wrap">
-        <div class="decl-caption">РОД • GENDER: мужско́й род • masculine</div>
+      <div class="seg"><div class="seg-label">Значение • Meaning</div><div class="seg-content">Документ для бесплатного или льготного проезда.</div></div>
+      <div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«Мой проездной билет закончился.» (My travel pass expired)</div></div>
+      <div class="seg"><div class="seg-label">Склонение • Declension</div><div class="seg-content decl-wrap">
+        <div class="decl-caption">РОД • GENDER: мужской род • masculine</div>
         <table class="decl">
           <thead>
-            <tr><th>Паде́ж • Case</th><th>Вопро́сы • Questions</th><th>Ед. ч. • Singular</th><th>Мн. ч. • Plural</th></tr>
+            <tr><th>Падеж • Case</th><th>Вопросы • Questions</th><th>Ед. ч. • Singular</th><th>Мн. ч. • Plural</th></tr>
           </thead>
           <tbody>
-            <tr><td class="form-cell">Имени́тельный<br><span class="case-en-sub">Nominative</span></td><td class="form-cell"><span class="q-words">Кто? Что?</span><span class="q-words-en">Who? What?</span></td><td class="form-cell">проездно́й</td><td class="form-cell">проездны́е</td></tr>
-            <tr><td class="form-cell">Роди́тельный<br><span class="case-en-sub">Genitive</span></td><td class="form-cell"><span class="q-words">Кого́? Чего́? (отку́да? без чего́?)</span><span class="q-words-en">Whom? Of what? (from where? without what?)</span></td><td class="form-cell">проездно́го</td><td class="form-cell">проездны́х</td></tr>
-            <tr><td class="form-cell">Да́тельный<br><span class="case-en-sub">Dative</span></td><td class="form-cell"><span class="q-words">Кому́? Чему́? (к чему́?)</span><span class="q-words-en">To whom? To what? (towards what?)</span></td><td class="form-cell">проездно́му</td><td class="form-cell">проездны́м</td></tr>
-            <tr><td class="form-cell">Вини́тельный<br><span class="case-en-sub">Accusative</span></td><td class="form-cell"><span class="q-words">Кого́? Что? (ви́жу что́?)</span><span class="q-words-en">Whom? What? (see what?)</span></td><td class="form-cell">проездно́й</td><td class="form-cell">проездны́е</td></tr>
-            <tr><td class="form-cell">Твори́тельный<br><span class="case-en-sub">Instrumental</span></td><td class="form-cell"><span class="q-words">Кем? Чем? (с чем?)</span><span class="q-words-en">By whom? With what? (with what?)</span></td><td class="form-cell">проездны́м</td><td class="form-cell">проездны́ми</td></tr>
-            <tr><td class="form-cell">Предло́жный<br><span class="case-en-sub">Prepositional</span></td><td class="form-cell"><span class="q-words">О ком? О чём? (о чём?)</span><span class="q-words-en">About whom? About what? (about what?)</span></td><td class="form-cell">о проездно́м</td><td class="form-cell">о проездны́х</td></tr>
+            <tr><td class="form-cell">Именительный<br><span class="case-en-sub">Nominative</span></td>
+            <td class="form-cell"><span class="q-words">Кто? Что?</span><span class="q-words-en">Who? What?</span></td>
+            <td class="form-cell">проездной</td><td class="form-cell">проездные</td></tr>
+            <tr><td class="form-cell">Родительный<br><span class="case-en-sub">Genitive</span></td>
+            <td class="form-cell"><span class="q-words">Кого? Чего? (откуда? без чего?)</span><span class="q-words-en">Whom? Of what? (from where? without what?)</span></td>
+            <td class="form-cell">проездного</td><td class="form-cell">проездных</td></tr>
+            <tr><td class="form-cell">Дательный<br><span class="case-en-sub">Dative</span></td>
+            <td class="form-cell"><span class="q-words">Кому? Чему? (к чему?)</span><span class="q-words-en">To whom? To what? (towards what?)</span></td>
+            <td class="form-cell">проездному</td><td class="form-cell">проездным</td></tr>
+            <tr><td class="form-cell">Винительный<br><span class="case-en-sub">Accusative</span></td>
+            <td class="form-cell"><span class="q-words">Кого? Что? (вижу что?)</span><span class="q-words-en">Whom? What? (see what?)</span></td>
+            <td class="form-cell">проездной</td><td class="form-cell">проездные</td></tr>
+            <tr><td class="form-cell">Творительный<br><span class="case-en-sub">Instrumental</span></td>
+            <td class="form-cell"><span class="q-words">Кем? Чем? (с чем?)</span><span class="q-words-en">By whom? With what? (with what?)</span></td>
+            <td class="form-cell">проездным</td><td class="form-cell">проездными</td></tr>
+            <tr><td class="form-cell">Предложный<br><span class="case-en-sub">Prepositional</span></td>
+            <td class="form-cell"><span class="q-words">О ком? О чём? (о чём?)</span><span class="q-words-en">About whom? About what? (about what?)</span></td>
+            <td class="form-cell">о проездном</td><td class="form-cell">о проездных</td></tr>
           </tbody>
         </table>
       </div></div>
@@ -457,21 +484,33 @@
     <!-- СЛОВО 7: Полезный -->
     <div class="g-card blue-strip word-card">
       <div class="word-head"><div><div class="word-ru">Поле́зный</div><div class="word-en">useful</div></div><span class="word-tag">ПРИЛ. • adj.</span></div>
-      <div class="seg"><div class="seg-label">Значе́ние • Meaning</div><div class="seg-content">Принося́щий по́льзу, ну́жный.</div></div>
-      <div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«Э́то был поле́зный о́пыт.» (It was a useful experience)</div></div>
-      <div class="seg"><div class="seg-label">Склоне́ние • Declension</div><div class="seg-content decl-wrap">
-        <div class="decl-caption">РОД • GENDER: мужско́й род • masculine</div>
+      <div class="seg"><div class="seg-label">Значение • Meaning</div><div class="seg-content">Приносящий пользу, нужный.</div></div>
+      <div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«Это был полезный опыт.» (It was a useful experience)</div></div>
+      <div class="seg"><div class="seg-label">Склонение • Declension</div><div class="seg-content decl-wrap">
+        <div class="decl-caption">РОД • GENDER: мужской род • masculine</div>
         <table class="decl">
           <thead>
-            <tr><th>Паде́ж • Case</th><th>Вопро́сы • Questions</th><th>Ед. ч. • Singular</th><th>Мн. ч. • Plural</th></tr>
+            <tr><th>Падеж • Case</th><th>Вопросы • Questions</th><th>Ед. ч. • Singular</th><th>Мн. ч. • Plural</th></tr>
           </thead>
           <tbody>
-            <tr><td class="form-cell">Имени́тельный<br><span class="case-en-sub">Nominative</span></td><td class="form-cell"><span class="q-words">Како́й?</span><span class="q-words-en">Which?</span></td><td class="form-cell">поле́зный</td><td class="form-cell">поле́зные</td></tr>
-            <tr><td class="form-cell">Роди́тельный<br><span class="case-en-sub">Genitive</span></td><td class="form-cell"><span class="q-words">Како́го? (отку́да? без чего́?)</span><span class="q-words-en">Of which? (from where? without what?)</span></td><td class="form-cell">поле́зного</td><td class="form-cell">поле́зных</td></td>
-            <tr><td class="form-cell">Да́тельный<br><span class="case-en-sub">Dative</span></td><td class="form-cell"><span class="q-words">Како́му? (к чему́?)</span><span class="q-words-en">To which? (towards what?)</span></td><td class="form-cell">поле́зному</td><td class="form-cell">поле́зным</td></tr>
-            <tr><td class="form-cell">Вини́тельный<br><span class="case-en-sub">Accusative</span></td><td class="form-cell"><span class="q-words">Како́й? / Како́го? (ви́жу что́? / кого́?)</span><span class="q-words-en">Which? (see what? / whom?)</span></td><td class="form-cell">поле́зный / поле́зного</td><td class="form-cell">поле́зные / поле́зных</td></tr>
-            <tr><td class="form-cell">Твори́тельный<br><span class="case-en-sub">Instrumental</span></td><td class="form-cell"><span class="q-words">Каки́м? (с чем? / с кем?)</span><span class="q-words-en">With which? (with what? / with whom?)</span></td><td class="form-cell">поле́зным</td><td class="form-cell">поле́зными</td><tr>
-            <tr><td class="form-cell">Предло́жный<br><span class="case-en-sub">Prepositional</span></td><td class="form-cell"><span class="q-words">О како́м? (о чём? / о ко́м?)</span><span class="q-words-en">About which? (about what? / about whom?)</span></td><td class="form-cell">о поле́зном</td><td class="form-cell">о поле́зных</td></tr>
+            <tr><td class="form-cell">Именительный<br><span class="case-en-sub">Nominative</span></td>
+            <td class="form-cell"><span class="q-words">Какой?</span><span class="q-words-en">Which?</span></td>
+            <td class="form-cell">полезный</td><td class="form-cell">полезные</td></tr>
+            <tr><td class="form-cell">Родительный<br><span class="case-en-sub">Genitive</span></td>
+            <td class="form-cell"><span class="q-words">Какого? (откуда? без чего?)</span><span class="q-words-en">Of which? (from where? without what?)</span></td>
+            <td class="form-cell">полезного</td><td class="form-cell">полезных</td></td>
+            <tr><td class="form-cell">Дательный<br><span class="case-en-sub">Dative</span></td>
+            <td class="form-cell"><span class="q-words">Какому? (к чему?)</span><span class="q-words-en">To which? (towards what?)</span></td>
+            <td class="form-cell">полезному</td><td class="form-cell">полезным</td></tr>
+            <tr><td class="form-cell">Винительный<br><span class="case-en-sub">Accusative</span></td>
+            <td class="form-cell"><span class="q-words">Какой? / Какого? (вижу что? / кого?)</span><span class="q-words-en">Which? (see what? / whom?)</span></td>
+            <td class="form-cell">полезный / полезного</td><td class="form-cell">полезные / полезных</td></tr>
+            <tr><td class="form-cell">Творительный<br><span class="case-en-sub">Instrumental</span></td>
+            <td class="form-cell"><span class="q-words">Каким? (с чем? / с кем?)</span><span class="q-words-en">With which? (with what? / with whom?)</span></td>
+            <td class="form-cell">полезным</td><td class="form-cell">полезными</td></tr>
+            <tr><td class="form-cell">Предложный<br><span class="case-en-sub">Prepositional</span></td>
+            <td class="form-cell"><span class="q-words">О каком? (о чём? / о ком?)</span><span class="q-words-en">About which? (about what? / about whom?)</span></td>
+            <td class="form-cell">о полезном</td><td class="form-cell">о полезных</td></tr>
           </tbody>
         </table>
       </div></div>
@@ -479,48 +518,48 @@
 
     <!-- ТЕКСТ УРОКА (после всех слов) -->
     <div style="margin-top: 2rem; margin-bottom: 1rem;">
-      <div class="sec-label"><h2>Те́кст уро́ка</h2><span class="pill">Lesson text</span></div>
+      <div class="sec-label"><h2>Текст урока</h2><span class="pill">Lesson text</span></div>
       <div class="g-card blue-strip text-card">
-        <p>На про́шлой неде́ле Domíník <em>заброни́ровал уро́к</em> ру́сского языка́ на те́му тра́нспорта. Он лю́бит <em>е́здить</em> на трамва́е и рассма́тривать <em>токоприёмник</em>, кото́рый в наро́де называ́ют <em>рога́</em>. Одна́жды он купи́л <em>проездно́й</em> и реши́л дое́хать до Останкинской <em>ба́шни</em>. «<em>По́езд хо́дит по ре́льсам</em>, а трамва́й — по у́лицам», — объясни́л ему́ Алекса́ндр. Domíník счита́ет, что <em>поле́зный</em> тра́нспорт — э́то <em>удо́бная маршру́тка</em>, кото́рая хо́дит ча́сто. Они́ <em>ве́село проводи́ли вре́мя</em>, обсужда́я городско́й тра́нспорт. Domíník ни ра́зу не <em>разочарова́лся</em> в свои́х пое́здках.</p>
+        <p>На про́шлой неде́ле Dominik <em>заброни́ровал уро́к</em> ру́сского языка́ на те́му тра́нспорта. Он лю́бит <em>е́здить</em> на трамва́е и рассма́тривать <em>токоприёмник</em>, кото́рый в наро́де называ́ют <em>рога́</em>. Одна́жды он купи́л <em>проездно́й</em> и реши́л дое́хать до Останкинской <em>ба́шни</em>. «<em>По́езд хо́дит по ре́льсам</em>, а трамва́й — по у́лицам», — объясни́л ему́ Алекса́ндр. Dominik счита́ет, что <em>поле́зный</em> тра́нспорт — э́то <em>удо́бная маршру́тка</em>, кото́рая хо́дит ча́сто. Они́ <em>ве́село проводи́ли вре́мя</em>, обсужда́я городско́й тра́нспорт. Dominik ни ра́зу не <em>разочарова́лся</em> в свои́х пое́здках.</p>
       </div>
     </div>
   </div>
 
   <!-- ========== ФРАЗЫ ========== -->
   <div id="phrases" class="section">
-    <div class="sec-label"><h2>Фра́зы из те́кста</h2><span class="pill">4 phrases</span></div>
-    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Ве́село проводи́ли вре́мя</div><div class="phrase-en">Had a good time / had fun</div></div><span class="phrase-type">до́суг</span></div><div class="seg"><div class="seg-label">Объясне́ние • Explanation</div><div class="seg-content">Фра́за о том, как интере́сно и прия́тно прошло́ вре́мя.</div></div><div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«Они́ ве́село проводи́ли вре́мя, обсужда́я городско́й тра́нспорт.»</div></div></div>
-    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Заброни́ровал уро́к</div><div class="phrase-en">Booked a lesson</div></div><span class="phrase-type">организа́ция</span></div><div class="seg"><div class="seg-label">Объясне́ние • Explanation</div><div class="seg-content">За́ранее запи́сался на заня́тие.</div></div><div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«На про́шлой неде́ле Domíník заброни́ровал уро́к ру́сского языка́.»</div></div></div>
-    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">По́езд хо́дит по ре́льсам</div><div class="phrase-en">The train runs on rails</div></div><span class="phrase-type">тра́нспорт</span></div><div class="seg"><div class="seg-label">Объясне́ние • Explanation</div><div class="seg-content">Ука́зывает на движе́ние по́езда по железнодоро́жным путя́м.</div></div><div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«По́езд хо́дит по ре́льсам, а трамва́й — по у́лицам.»</div></div></div>
-    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Удо́бная маршру́тка</div><div class="phrase-en">Convenient minibus / shuttle van</div></div><span class="phrase-type">тра́нспорт</span></div><div class="seg"><div class="seg-label">Объясне́ние • Explanation</div><div class="seg-content">Комфорта́бельное маршру́тное такси́.</div></div><div class="seg"><div class="seg-label">В те́ксте • In the text</div><div class="seg-content">«Поле́зный тра́нспорт — э́то удо́бная маршру́тка, кото́рая хо́дит ча́сто.»</div></div></div>
+    <div class="sec-label"><h2>Фразы из текста</h2><span class="pill">Phrases from the text</span></div>
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Ве́село проводи́ли вре́мя</div><div class="phrase-en">Had a good time / had fun</div></div><span class="phrase-type">досуг</span></div><div class="seg"><div class="seg-label">Объяснение • Explanation</div><div class="seg-content">Фраза о том, как интересно и приятно прошло время.</div></div><div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«Они весело проводили время, обсуждая городской транспорт.»</div></div></div>
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Заброни́ровал уро́к</div><div class="phrase-en">Booked a lesson</div></div><span class="phrase-type">организация</span></div><div class="seg"><div class="seg-label">Объяснение • Explanation</div><div class="seg-content">Заранее записался на занятие.</div></div><div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«На прошлой неделе Dominik забронировал урок русского языка.»</div></div></div>
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">По́езд хо́дит по ре́льсам</div><div class="phrase-en">The train runs on rails</div></div><span class="phrase-type">транспорт</span></div><div class="seg"><div class="seg-label">Объяснение • Explanation</div><div class="seg-content">Указывает на движение поезда по железнодорожным путям.</div></div><div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«Поезд ходит по рельсам, а трамвай — по улицам.»</div></div></div>
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Удо́бная маршру́тка</div><div class="phrase-en">Convenient minibus / shuttle van</div></div><span class="phrase-type">транспорт</span></div><div class="seg"><div class="seg-label">Объяснение • Explanation</div><div class="seg-content">Комфортабельный маршрутное такси.</div></div><div class="seg"><div class="seg-label">В тексте • In the text</div><div class="seg-content">«Полезный транспорт — это удобная маршрутка, которая ходит часто.»</div></div></div>
   </div>
 
   <!-- ========== ЗАДАНИЯ ========== -->
   <div id="hw" class="section">
-    <div class="sec-label"><h2>Грамма́тика</h2><span class="pill">Grammar</span></div>
-    <div class="g-card blue-strip grammar-topic">📌 <strong class="t">Те́ма: Вини́тельный паде́ж — Кого́? Что? • Topic: Accusative case — Whom? What?</strong><br>В те́ксте: <em class="ex">«купи́л (что?) проездно́й», «уви́дел (что?) ба́шню», «обсужда́я (что?) тра́нспорт»</em>.<br><strong class="r">Пра́вило • Rule:</strong> по́сле глаго́лов де́йствия → Вини́тельный паде́ж • After action verbs → Accusative case.</div>
-    <div class="g-card blue-strip ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-title">Поста́вьте сло́во в Вини́тельном падеже́ <span class="ex-trans">(Put the word in Accusative case)</span></div></div><div class="ex-body"><ol><li>Я уви́дел высо́кую <span class="blank"></span> (ба́шня)</li><li>Мы купи́ли <span class="blank"></span> на ме́сяц (проездно́й)</li><li>Он получи́л <span class="blank"></span> о́пыт (поле́зный)</li><li>Води́тель прове́рил <span class="blank"></span> (токоприёмник)</li><li>Пассажи́ры жда́ли <span class="blank"></span> (маршру́тка)</li></ol></div></div>
+    <div class="sec-label"><h2>Грамматика</h2><span class="pill">Grammar</span></div>
+    <div class="g-card blue-strip grammar-topic">📌 <strong class="t">Тема: Винительный падеж — Кого? Что? • Topic: Accusative case — Whom? What?</strong><br>В тексте: <em class="ex">«купил (что?) проездной», «увидел (что?) башню», «обсуждая (что?) транспорт»</em>.<br><strong class="r">Правило • Rule:</strong> после глаголов действия → Винительный падеж • After action verbs → Accusative case.</div>
+    <div class="g-card blue-strip ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-title">Поставьте слово в Винительном падеже <span class="ex-trans">(Put the word in Accusative case)</span></div></div><div class="ex-body"><ol><li>Я увидел высокую <span class="blank"></span> (башня)</li><li>Мы купили <span class="blank"></span> на месяц (проездной)</li><li>Он получил <span class="blank"></span> опыт (полезный)</li><li>Водитель проверил <span class="blank"></span> (токоприёмник)</li><li>Пассажиры ждали <span class="blank"></span> (маршрутка)</li></ol></div></div>
     
-    <div class="sec-label"><h2>Вопро́сы «Да / Нет»</h2><span class="pill">Questions Yes | No</span></div>
-    <div class="q-block"><div class="q-item">🔵 1. Domíník заброни́ровал уро́к на те́му тра́нспорта?</div><div class="q-item">🔵 2. Domíník лю́бит е́здить на авто́бусе?</div><div class="q-item">🔵 3. Токоприёмник называ́ют рога́ми?</div><div class="q-item">🔵 4. Domíník купи́л проездно́й биле́т?</div><div class="q-item">🔵 5. Domíník разочарова́лся в свои́х пое́здках?</div><div class="q-item">🔵 6. Они́ ве́село проводи́ли вре́мя?</div></div>
+    <div class="sec-label"><h2>Вопросы «Да / Нет»</h2><span class="pill">Questions Yes | No</span></div>
+    <div class="q-block"><div class="q-item">🔵 1. Dominik забронировал урок на тему транспорта?</div><div class="q-item">🔵 2. Dominik любит ездить на автобусе?</div><div class="q-item">🔵 3. Токоприёмник называют рогами?</div><div class="q-item">🔵 4. Dominik купил проездной билет?</div><div class="q-item">🔵 5. Dominik разочаровался в своих поездках?</div><div class="q-item">🔵 6. Они весело проводили время?</div></div>
     
-    <div class="sec-label"><h2>Откры́тые вопро́сы</h2><span class="pill">Open questions</span></div>
-    <div class="q-block"><div class="q-item">🟡 1. Что заброни́ровал Domíník?</div><div class="q-item">🟡 2. На чём лю́бит е́здить Domíník?</div><div class="q-item">🟡 3. Как называ́ют токоприёмник в наро́де?</div><div class="q-item">🟡 4. Куда́ реши́л дое́хать Domíník?</div><div class="q-item">🟡 5. Како́й тра́нспорт Domíník счита́ет поле́зным?</div><div class="q-item">🟡 6. Как они́ проводи́ли вре́мя?</div></div>
+    <div class="sec-label"><h2>Открытые вопросы</h2><span class="pill">Open questions</span></div>
+    <div class="q-block"><div class="q-item">🟡 1. Что забронировал Dominik?</div><div class="q-item">🟡 2. На чём любит ездить Dominik?</div><div class="q-item">🟡 3. Как называют токоприёмник в народе?</div><div class="q-item">🟡 4. Куда решил доехать Dominik?</div><div class="q-item">🟡 5. Какой транспорт Dominik считает полезным?</div><div class="q-item">🟡 6. Как они проводили время?</div></div>
     
-    <div class="sec-label"><h2>Обсужде́ние</h2><span class="pill">Discussion</span></div>
-    <div class="q-block"><div class="q-item">🗣️ 1. Како́й тра́нспорт вы счита́ете са́мым удо́бным?</div><div class="q-item">🗣️ 2. Ча́сто ли вы разочаро́вываетесь в обще́ственном тра́нспорте?</div><div class="q-item">🗣️ 3. Что для вас поле́зный о́пыт в пое́здках?</div></div>
+    <div class="sec-label"><h2>Обсуждение</h2><span class="pill">Discussion</span></div>
+    <div class="q-block"><div class="q-item">🗣️ 1. Какой транспорт вы считаете самым удобным?</div><div class="q-item">🗣️ 2. Часто ли вы разочаровываетесь в общественном транспорте?</div><div class="q-item">🗣️ 3. Что для вас полезный опыт в поездках?</div></div>
   </div>
 
   <!-- ========== ОТВЕТЫ ========== -->
   <div id="answers" class="section">
-    <div class="sec-label"><h2>Отве́ты к зада́ниям</h2><span class="pill">Answers</span></div>
-    <div class="g-card ans-strip ans-card"><div class="ans-head">Упражне́ние 1 — Вини́тельный паде́ж <span class="ans-trans">(Exercise 1 — Accusative case)</span></div><div class="ans-body"><ol><li><strong>ба́шню</strong> <span class="ans-dim">(ж.р. → -ю)</span></li><li><strong>проездно́й</strong> <span class="ans-dim">(м.р. неодуш.)</span></li><li><strong>поле́зный</strong> <span class="ans-dim">(м.р.)</span></li><li><strong>токоприёмник</strong> <span class="ans-dim">(м.р.)</span></li><li><strong>маршру́тку</strong> <span class="ans-dim">(ж.р. → -у)</span></li></ol></div></div>
-    <div class="g-card ans-strip ans-card"><div class="ans-head">Вопро́сы «Да / Нет» <span class="ans-trans">(Yes / No questions — Answers)</span></div><div class="ans-body"><ol><li><span class="ans-yes">Да</span> — он заброни́ровал уро́к на те́му тра́нспорта.</li><li><span class="ans-no">Нет</span> — он лю́бит е́здить на трамва́е.</li><li><span class="ans-yes">Да</span> — токоприёмник называ́ют рога́ми.</li><li><span class="ans-yes">Да</span> — он купи́л проездно́й.</li><li><span class="ans-no">Нет</span> — он не разочарова́лся в пое́здках.</li><li><span class="ans-yes">Да</span> — они́ ве́село проводи́ли вре́мя.</li></ol></div></div>
-    <div class="g-card ans-strip ans-card"><div class="ans-head">Откры́тые вопро́сы <span class="ans-trans">(Open questions — Short answers)</span></div><div class="ans-body"><ol><li>Domíník заброни́ровал уро́к.</li><li>Он лю́бит е́здить на трамва́е.</li><li>Токоприёмник называ́ют рога́ми.</li><li>Он реши́л дое́хать до Останкинской ба́шни.</li><li>Он счита́ет поле́зным удо́бную маршру́тку.</li><li>Они́ ве́село проводи́ли вре́мя.</li></ol></div></div>
-    <div class="g-card ans-strip ans-card"><div class="ans-head">Обсужде́ние <span class="ans-trans">(Discussion — Notes)</span></div><div class="ans-body" style="color:var(--text-dim);">Откры́тые вопро́сы для свобо́дной бесе́ды. • Open-ended questions for discussion.</div></div>
+    <div class="sec-label"><h2>Ответы к заданиям</h2><span class="pill">Answers</span></div>
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Упражнение 1 — Винительный падеж <span class="ans-trans">(Exercise 1 — Accusative case)</span></div><div class="ans-body"><ol><li><strong>башню</strong> <span class="ans-dim">(ж.р. → -ю)</span></li><li><strong>проездной</strong> <span class="ans-dim">(м.р. неодуш.)</span></li><li><strong>полезный</strong> <span class="ans-dim">(м.р.)</span></li><li><strong>токоприёмник</strong> <span class="ans-dim">(м.р.)</span></li><li><strong>маршрутку</strong> <span class="ans-dim">(ж.р. → -у)</span></li></ol></div></div>
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Вопросы «Да / Нет» <span class="ans-trans">(Yes / No questions — Answers)</span></div><div class="ans-body"><ol><li><span class="ans-yes">Да</span> — он забронировал урок на тему транспорта.</li><li><span class="ans-no">Нет</span> — он любит ездить на трамвае.</li><li><span class="ans-yes">Да</span> — токоприёмник называют рогами.</li><li><span class="ans-yes">Да</span> — он купил проездной.</li><li><span class="ans-no">Нет</span> — он не разочаровался в поездках.</li><li><span class="ans-yes">Да</span> — они весело проводили время.</li></ol></div></div>
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Открытые вопросы <span class="ans-trans">(Open questions — Short answers)</span></div><div class="ans-body"><ol><li>Dominik забронировал урок.</li><li>Он любит ездить на трамвае.</li><li>Токоприёмник называют рогами.</li><li>Он решил доехать до Останкинской башни.</li><li>Он считает полезным удобную маршрутку.</li><li>Они весело проводили время.</li></ol></div></div>
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Обсуждение <span class="ans-trans">(Discussion — Notes)</span></div><div class="ans-body" style="color:var(--text-dim);">Открытые вопросы для свободной беседы. • Open-ended questions for discussion.</div></div>
   </div>
 </main>
-<footer>Русский язык с Александром · Domíník · Те́ма: Тра́нспорт · B1</footer>
+<footer>Русский язык с Александром · Dominik · Тема: Транспорт · B1</footer>
 
 <script>
   (function() {
