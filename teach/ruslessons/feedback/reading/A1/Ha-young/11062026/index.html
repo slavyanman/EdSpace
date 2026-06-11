@@ -1,1 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Русский язык с Александром — Тема «Семья»</title>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ========== ВСЕ СТИЛИ ПОЛНОСТЬЮ СОХРАНЕНЫ ========== */
+  :root {
+    --vtb-cyan:#00B4FF; --vtb-sky:#64CFFF; --ru-red:#D4213D;
+    --fb-orange:#F97718; --ans-green:#84e3c8; --sub-color:#758592;
+    --glass-border:rgba(255,255,255,0.22);
+    --glass-shadow:0 2px 0 rgba(255,255,255,0.20) inset,0 -1px 0 rgba(0,0,40,0.15) inset,0 12px 40px rgba(0,20,80,0.28),0 2px 8px rgba(0,0,0,0.18);
+    --radius:18px; --radius-sm:11px; --text:#E8F4FF; --text-dim:rgba(180,215,255,0.58);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .section.active { animation: none !important; } }
+  body{font-family:'Inter',sans-serif;color:var(--text);min-height:100vh;overflow-x:hidden;
+    background:radial-gradient(ellipse 80% 60% at 15% 40%,rgba(41,121,255,0.55) 0%,transparent 60%),
+      radial-gradient(ellipse 60% 50% at 85% 65%,rgba(0,180,255,0.30) 0%,transparent 55%),
+      linear-gradient(145deg,#0D47A1 0%,#1565C0 30%,#0A2896 55%,#1976D2 100%);
+    background-attachment:fixed;}
 
+  .header{position:relative;overflow:hidden;min-height:160px;height:auto;}
+  @media (min-width: 768px) { .header { height: 190px; } }
+  .header-bg{position:absolute;inset:0;z-index:0;
+    background:linear-gradient(135deg,rgba(6,28,105,0.98) 0%,rgba(11,60,145,0.95) 50%,rgba(8,42,130,0.97) 100%);}
+  .header-pattern{position:absolute;inset:0;z-index:1;width:100%;height:100%;opacity:0.5;pointer-events:none;}
+  .header-grid{position:relative;z-index:5;min-height:160px;height:auto;display:flex;align-items:center;justify-content:flex-start;padding:1rem;}
+  @media (min-width: 768px) { .header-grid { height: 190px; padding:0 1rem 0 2rem; } }
+  .header-left{padding:0;width:auto;flex-shrink:0;align-self:center;max-width:90%;}
+  @media (min-width: 768px) { .header-left { max-width: 50%; } }
+  .header-card{
+    background:rgba(6,22,90,0.85);
+    border:1px solid rgba(120,180,255,0.50);
+    border-radius:var(--radius);
+    backdrop-filter:blur(30px) saturate(180%);
+    -webkit-backdrop-filter:blur(30px) saturate(180%);
+    box-shadow:0 2px 0 rgba(150,200,255,0.18) inset,0 -1px 0 rgba(0,0,40,0.15) inset,0 16px 48px rgba(0,20,80,0.32);
+    width:100%;
+    padding:0.9rem 1.2rem;
+    position:relative;
+    overflow:hidden;
+  }
+  @media (min-width: 768px) { .header-card { width:133%; } }
+  .header-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;
+    background:linear-gradient(90deg,transparent,rgba(150,210,255,.45),transparent);}
+  .h-title{font-family:'Days One',sans-serif;font-size:clamp(1rem,4vw,1.6rem);font-weight:400;
+    line-height:1.25;color:#fff;letter-spacing:.02em;margin-bottom:.3rem;
+    text-shadow:0 0 24px rgba(0,180,255,0.55),0 2px 4px rgba(0,0,0,0.5);}
+  .h-title span{color:var(--vtb-sky);}
+  .h-badge{font-size:clamp(9px,3vw,10.5px);font-weight:500;padding:3px 10px;border-radius:100px;
+    background:rgba(0,180,255,0.12);color:var(--vtb-sky);border:1px solid rgba(0,180,255,0.32);display:inline-block;margin:2px;}
+  .badge-container{display:flex;gap:6px;flex-wrap:wrap;margin-top:.6rem;}
+  .shimmer{height:1px;background:linear-gradient(90deg,transparent,rgba(0,180,255,.5),#fff,rgba(0,180,255,.5),transparent);}
+
+  .tab-nav{position:sticky;top:0;z-index:99;border-bottom:1px solid rgba(255,255,255,0.14);display:flex;flex-direction:column;box-shadow:0 6px 24px rgba(0,20,100,0.35);overflow:hidden;}
+  .tab-nav-bg{position:absolute;inset:0;z-index:0;background:rgba(8,35,130,0.72);backdrop-filter:blur(32px) saturate(200%);}
+  .tricolour{display:flex;height:4px;position:relative;z-index:3;flex-shrink:0;}
+  .tricolour span{flex:1;}.tc-w{background:#FFFFFF;}.tc-b{background:#1565C0;}.tc-r{background:#D4213D;}
+  .tab-buttons{display:flex;position:relative;z-index:2;flex-wrap:wrap;}
+  .tab-btn{flex:1;min-width:90px;font-family:'Days One',sans-serif;font-size:clamp(11px,4vw,20px);font-weight:400;padding:0.8rem 0.3rem;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;color:rgba(180,215,255,0.70);transition:all .22s;text-align:center;}
+  .tab-btn .tr{display:inline-block;padding:4px 12px;border:1px solid transparent;border-radius:100px;transition:all .22s;font-size:clamp(10px,3.5vw,16px);}
+  .tab-btn .te{display:block;font-size:clamp(8px,2.5vw,11px);opacity:.52;margin-top:3px;}
+  .tab-btn:hover{color:var(--vtb-sky);}
+  .tab-btn:hover .tr{border-color:rgba(0,180,255,0.30);background:rgba(0,180,255,0.07);}
+  .tab-btn.active{color:#fff;border-bottom-color:var(--vtb-cyan);text-shadow:0 0 10px rgba(0,180,255,.5);}
+  .tab-btn.active .tr{border-color:rgba(0,180,255,0.50);background:rgba(0,180,255,0.12);}
+  .tab-btn:focus-visible { outline: 2px solid var(--vtb-cyan); outline-offset: 2px; border-radius: 4px; }
+
+  main{max-width:860px;margin:0 auto;padding:1.5rem 1rem 4rem;}
+  @media (min-width: 768px) { main { padding: 2rem 1.25rem 5rem; } }
+  .section { display: block; animation:fadeUp .3s ease; }
+  .js-tabs .section { display: none; }
+  .js-tabs .section.active { display: block; }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+  .sec-label{display:flex;align-items:center;gap:10px;margin-bottom:1.2rem;flex-wrap:wrap;}
+  .sec-label h2{font-family:'Days One',sans-serif;font-size:clamp(16px,5vw,18px);font-weight:400;color:#fff;letter-spacing:.02em;text-shadow:0 0 14px rgba(0,180,255,.35);}
+  .sec-label .pill{font-size:10.5px;font-weight:500;padding:4px 14px;border-radius:100px;background:rgba(0,180,255,.12);color:var(--vtb-sky);border:1px solid rgba(0,180,255,.26);}
+
+  .g-card{position:relative;background:rgba(255,255,255,0.09);border:1px solid var(--glass-border);border-radius:var(--radius);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);box-shadow:var(--glass-shadow);overflow:hidden;}
+  .g-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);}
+  .g-card.blue-strip::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--vtb-cyan),#1565C0);border-radius:3px 0 0 3px;}
+  .g-card.yellow-strip::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#FFD700,#F97718);border-radius:3px 0 0 3px;}
+  .g-card.ans-strip::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#84e3c8,#00C2A8);border-radius:3px 0 0 3px;}
+
+  .text-card{margin-bottom:1.8rem;padding:1.2rem;line-height:1.8;font-size:clamp(13px,4vw,14.5px);}
+  @media (min-width: 768px) { .text-card { padding: 1.4rem 1.6rem; } }
+  .text-card em{font-style:normal;color:var(--vtb-cyan);font-weight:600;}
+
+  .word-card{margin-bottom:1.4rem;}
+  .word-head{display:flex;align-items:center;gap:0.8rem;padding:0.8rem 1rem;background:linear-gradient(90deg,rgba(0,50,150,0.60),rgba(0,80,200,0.30),transparent);border-bottom:1px solid rgba(255,255,255,.07);flex-wrap:wrap;}
+  @media (min-width: 768px) { .word-head { padding: 1rem 1.4rem 1rem 1.5rem; gap: 1rem; } }
+  .word-ru{font-size:clamp(18px,6vw,22px);font-weight:600;color:#fff;text-shadow:0 0 14px rgba(0,180,255,.38);}
+  .word-en{font-size:clamp(11px,3.5vw,13px);color:var(--vtb-sky);}
+  .word-tag{font-size:10px;font-weight:600;letter-spacing:.05em;padding:3px 10px;border-radius:100px;background:rgba(0,180,255,.15);color:var(--vtb-cyan);border:1px solid rgba(0,180,255,.4);}
+  
+  .seg{padding:0.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.05);font-size:clamp(12px,3.5vw,13.5px);line-height:1.6;}
+  @media (min-width: 768px) { .seg { padding: 0.82rem 1.4rem 0.82rem 1.5rem; } }
+  .seg-label{display:inline-block;font-family:'Days One',sans-serif;font-size:11px;color:var(--vtb-sky);margin-bottom:6px;padding:3px 12px;border:1px solid rgba(0,180,255,0.35);border-radius:100px;background:rgba(0,180,255,0.10);}
+  .seg-content{color:var(--text);}
+  .seg-content strong{color:var(--vtb-sky);}
+
+  .verb-table-wrap{overflow-x:auto;margin-top:8px;}
+  .verb-table{width:100%;border-collapse:collapse;font-size:clamp(11px,3vw,12.5px);}
+  .verb-table th{background:rgba(0,180,255,.10);color:var(--vtb-sky);font-weight:600;padding:7px 10px;text-align:center;border:1px solid rgba(255,255,255,.07);}
+  .verb-table td{padding:7px 10px;border:1px solid rgba(255,255,255,.05);color:var(--text);vertical-align:top;text-align:center;}
+  .verb-table tr:nth-child(even) td{background:rgba(255,255,255,.025);}
+  .tense-title{color:var(--vtb-cyan);font-weight:600;font-size:11px;display:block;}
+  .question-ru{font-style:italic;color:var(--vtb-sky);display:block;font-size:10px;}
+  .question-en{font-size:9px;color:var(--text-dim);display:block;}
+  .pronoun-yellow{background-color:rgba(255,215,0,0.3);color:#FFD700;font-weight:600;padding:2px 4px;border-radius:4px;display:inline-block;}
+
+  .decl-wrap{overflow-x:auto;margin-top:8px;}
+  table.decl{width:100%;border-collapse:collapse;font-size:clamp(11px,3vw,12.5px);}
+  table.decl th{background:rgba(0,180,255,.10);color:var(--vtb-sky);font-weight:600;padding:7px 10px;text-align:center;border:1px solid rgba(255,255,255,.07);}
+  table.decl td{padding:7px 10px;border:1px solid rgba(255,255,255,.05);color:var(--text);vertical-align:top;text-align:left;}
+  table.decl tr:nth-child(even) td{background:rgba(255,255,255,.025);}
+  .case-ru{font-weight:600;color:#fff;display:block;line-height:1.3;}
+  .case-en-sub{font-size:9px;color:var(--text-dim);display:block;line-height:1.2;}
+  .table-note{font-size:10px; margin-top:8px; color:var(--text-dim); font-style:italic;}
+
+  .phrase-card{margin-bottom:1.1rem;}
+  .phrase-head{display:flex;align-items:center;gap:0.7rem;padding:0.8rem 1rem;background:linear-gradient(90deg,rgba(0,50,150,0.60),rgba(0,80,200,0.30),transparent);border-bottom:1px solid rgba(255,255,255,.07);flex-wrap:wrap;}
+  @media (min-width: 768px) { .phrase-head { padding: 0.9rem 1.4rem 0.9rem 1.5rem; gap: 0.75rem; } }
+  .phrase-ru{font-size:clamp(16px,5vw,18px);font-weight:600;color:#fff;text-transform:lowercase;}
+  .phrase-ru::first-letter{text-transform:uppercase;}
+  .phrase-en{font-size:clamp(10px,3vw,12px);color:var(--vtb-sky);}
+  .phrase-type{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:rgba(255,180,0,.15);color:#FFD700;border:1px solid rgba(255,180,0,.35);}
+  
+  .ex-card{margin-bottom:1.3rem;}
+  .ex-head{display:flex;align-items:center;gap:0.7rem;padding:0.7rem 1rem;background:linear-gradient(90deg,rgba(0,50,160,0.75),rgba(0,80,200,0.45));border-bottom:1px solid rgba(255,255,255,.08);color:#fff;}
+  @media (min-width: 768px) { .ex-head { padding: 0.85rem 1.4rem; gap: 0.75rem; } }
+  .ex-num{width:26px;height:26px;border-radius:50%;background:rgba(0,180,255,.18);border:1px solid rgba(0,180,255,.4);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;color:var(--vtb-cyan);}
+  .ex-title{font-family:'Days One',sans-serif;font-size:clamp(12px,4vw,14px);font-weight:400;}
+  .ex-body{padding:1rem;font-size:clamp(13px,4vw,14px);line-height:1.8;}
+  @media (min-width: 768px) { .ex-body { padding: 1.15rem 1.4rem; } }
+  .ex-body ol{padding-left:1.2rem;}
+  .ex-body li{margin-bottom:0.5rem;}
+  .blank{display:inline-block;min-width:70px;border-bottom:1.5px solid var(--vtb-cyan);margin:0 4px;}
+  
+  .grammar-topic{margin-bottom:1.4rem;padding:0.8rem 1rem;font-size:clamp(12px,3.5vw,13.5px);line-height:1.6;}
+  @media (min-width: 768px) { .grammar-topic { padding: 1rem 1.4rem; } }
+  .grammar-topic strong.t{color:#84e3c8;}
+  .grammar-topic strong.r{color:#FFD700;}
+  
+  .ans-card{margin-bottom:1.3rem;}
+  .ans-head{padding:0.7rem 1rem;background:linear-gradient(90deg,rgba(10,80,60,0.60),transparent);border-bottom:1px solid rgba(132,227,200,0.15);color:#84e3c8;font-family:'Days One',sans-serif;font-size:clamp(12px,4vw,14px);}
+  @media (min-width: 768px) { .ans-head { padding: 0.85rem 1.4rem 0.85rem 1.5rem; } }
+  .ans-body{padding:1rem;font-size:clamp(13px,4vw,14px);line-height:1.8;}
+  @media (min-width: 768px) { .ans-body { padding: 1.15rem 1.4rem 1.15rem 1.5rem; } }
+  .ans-body ol { padding-left: 1.2rem; margin: 0; }
+  .ans-body li { margin-bottom: 0.5rem; padding-left: 0.25rem; }
+  .ans-yes{color:#84e3c8;font-weight:600;}
+  .ans-no{color:var(--sub-color);font-weight:600;}
+  .ans-dim{color:var(--text-dim);font-size:11px;}
+  
+  .q-block{margin-bottom:1.6rem;}
+  .q-item{background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.20);border-radius:var(--radius-sm);backdrop-filter:blur(18px);padding:0.7rem 1rem;margin-bottom:0.55rem;font-size:clamp(13px,4vw,14px);line-height:1.5;}
+  @media (min-width: 768px) { .q-item { padding: 0.82rem 1.2rem; } }
+  
+  footer{text-align:center;padding:1.5rem;font-size:clamp(10px,3vw,12px);color:var(--text-dim);border-top:1px solid rgba(255,255,255,.07);}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-bg"></div>
+  <svg class="header-pattern" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs>
+      <style>.gz-cobalt { stroke:#5B9BD5; fill:none; } .gz-mid { stroke:#7AB8E8; fill:none; } .gz-white { stroke:rgba(255,255,255,0.6); fill:none; } .gf-cobalt { fill:rgba(91,155,213,0.3); stroke:none; } .gf-mid { fill:rgba(122,184,232,0.25); stroke:none; }</style>
+      <g id="gz-rose"><path d="M0-20C-8-28-15-25-12-15C-8-7-3-5 0-5 3-5 8-7 12-15 15-25 8-28 0-20Z" class="gf-cobalt"/><path d="M0-20C-8-28-15-25-12-15C-8-7-3-5 0-5 3-5 8-7 12-15 15-25 8-28 0-20Z" class="gz-cobalt" stroke-width="1.2"/><path d="M0-20C-8-28-15-25-12-15C-8-7-3-5 0-5 3-5 8-7 12-15 15-25 8-28 0-20Z" class="gf-cobalt" transform="rotate(72)"/><path d="M0-20C-8-28-15-25-12-15C-8-7-3-5 0-5 3-5 8-7 12-15 15-25 8-28 0-20Z" class="gf-mid" transform="rotate(144)"/><circle r="6" fill="rgba(26,61,168,0.5)"/><circle r="3" fill="rgba(122,184,232,0.7)"/></g>
+      <g id="firebird-feather"><path d="M0,0 C12,-28 28,-45 40,-50 C36,-38 32,-22 34,0 C32,22 36,38 40,50 C28,45 12,28 0,0Z" class="gf-mid"/><path d="M0,0 C12,-28 28,-45 40,-50" class="gz-cobalt" stroke-width="1.3"/><path d="M0,0 C12,-18 24,-26 32,-28" class="gz-white" stroke-width="1"/><path d="M0,0 C12,18 24,26 32,28" class="gz-white" stroke-width="1"/><ellipse cx="20" cy="0" rx="5" ry="10" fill="rgba(100,207,255,0.35)" class="gz-cobalt" stroke-width="0.8"/><circle cx="28" cy="-15" r="2.5" fill="rgba(100,207,255,0.5)"/><circle cx="28" cy="15" r="2.5" fill="rgba(100,207,255,0.5)"/></g>
+      <g id="book"><rect x="-15" y="-18" width="30" height="24" rx="2" class="gf-cobalt" stroke="#5B9BD5" stroke-width="0.8" fill="rgba(91,155,213,0.2)"/><line x1="0" y1="-18" x2="0" y2="6" class="gz-white" stroke-width="0.8"/><line x1="-10" y1="-12" x2="-3" y2="-12" class="gz-white" stroke-width="0.6"/><line x1="-10" y1="-8" x2="-3" y2="-8" class="gz-white" stroke-width="0.6"/><line x1="3" y1="-12" x2="10" y2="-12" class="gz-white" stroke-width="0.6"/><line x1="3" y1="-8" x2="10" y2="-8" class="gz-white" stroke-width="0.6"/><path d="M-15,-18 L-15,6 Q-15,10 -10,8 L0,4 L0,-18 Z" class="gf-mid" stroke="#7AB8E8" stroke-width="0.5" fill="rgba(122,184,232,0.15)"/></g>
+      <g id="pushkin-silhouette"><path d="M0,-32 C-4,-30 -6,-26 -5,-22 C-4,-18 0,-16 5,-18 C8,-20 9,-25 8,-28 C7,-31 3,-33 0,-32Z" fill="rgba(91,155,213,0.5)" stroke="#5B9BD5" stroke-width="0.8"/><path d="M-5,-22 C-8,-18 -12,-12 -12,-6 C-12,0 -8,6 -4,8 C0,10 5,8 8,4" fill="rgba(91,155,213,0.35)" stroke="#5B9BD5" stroke-width="0.8"/><path d="M-4,8 C-8,14 -12,22 -10,30 C-8,36 -4,40 0,42 C4,40 8,36 10,30 C12,22 8,14 4,8" fill="rgba(122,184,232,0.25)" stroke="#7AB8E8" stroke-width="0.7"/><path d="M-5,-22 C-10,-20 -12,-16 -10,-12" stroke="rgba(91,155,213,0.6)" stroke-width="1" fill="none"/><rect x="-6" y="-42" width="12" height="14" rx="1" fill="rgba(91,155,213,0.4)" stroke="#5B9BD5" stroke-width="0.6"/><rect x="-8" y="-28" width="16" height="3" rx="1" fill="rgba(91,155,213,0.5)" stroke="#5B9BD5" stroke-width="0.5"/></g>
+      <g id="inkwell"><rect x="-12" y="-8" width="24" height="14" rx="3" class="gf-cobalt" stroke="#5B9BD5" stroke-width="0.8" fill="rgba(91,155,213,0.25)"/><rect x="-6" y="-12" width="12" height="6" rx="2" class="gf-mid" stroke="#7AB8E8" stroke-width="0.6" fill="rgba(122,184,232,0.2)"/><ellipse cx="0" cy="-12" rx="7" ry="2.5" class="gf-cobalt" stroke="#5B9BD5" stroke-width="0.6" fill="rgba(91,155,213,0.3)"/><ellipse cx="0" cy="-8" rx="8" ry="2" fill="rgba(26,61,168,0.6)"/></g>
+      <g id="quill-pen"><path d="M0,0 C-3,-8 -5,-18 -2,-28 C0,-35 4,-40 8,-42 C6,-36 5,-30 4,-25 C6,-22 8,-18 7,-12 C6,-8 4,-4 0,0Z" fill="rgba(122,184,232,0.35)" stroke="#7AB8E8" stroke-width="0.7"/><path d="M0,0 C-1,-6 -2,-12 -1,-18" stroke="#5B9BD5" stroke-width="0.5" fill="none"/><path d="M-2,-28 C-1,-32 1,-36 3,-40" stroke="rgba(255,255,255,0.5)" stroke-width="0.6" fill="none"/></g>
+      <g id="fountain-pen"><rect x="-2" y="-20" width="4" height="22" rx="1" fill="rgba(91,155,213,0.4)" stroke="#5B9BD5" stroke-width="0.6"/><path d="M-2,-20 L0,-28 L2,-20 Z" fill="rgba(122,184,232,0.5)" stroke="#7AB8E8" stroke-width="0.5"/><rect x="-3" y="2" width="6" height="3" rx="0.5" fill="rgba(91,155,213,0.3)" stroke="#5B9BD5" stroke-width="0.4"/><path d="M0,-28 L0,-32" stroke="rgba(100,207,255,0.6)" stroke-width="0.8"/></g>
+      <g id="open-book"><path d="M-22,-14 L-3,-18 L0,-16 L3,-18 L22,-14 L20,12 L3,14 L0,12 L-3,14 L-20,12 Z" class="gf-cobalt" stroke="#5B9BD5" stroke-width="0.8" fill="rgba(91,155,213,0.2)"/><line x1="0" y1="-16" x2="0" y2="12" class="gz-white" stroke-width="0.8"/><line x1="-15" y1="-9" x2="-4" y2="-12" class="gz-white" stroke-width="0.5"/><line x1="-13" y1="-3" x2="-4" y2="-6" class="gz-white" stroke-width="0.5"/><line x1="4" y1="-12" x2="15" y2="-9" class="gz-white" stroke-width="0.5"/><line x1="4" y1="-6" x2="13" y2="-3" class="gz-white" stroke-width="0.5"/><path d="M-20,12 L-20,-14 Q-10,-16 0,-16 Q10,-16 20,-14 L20,12 Q10,10 0,10 Q-10,10 -20,12Z" fill="rgba(122,184,232,0.1)" stroke="#7AB8E8" stroke-width="0.5"/></g>
+    </defs>
+    <use href="#gz-rose" transform="translate(50,95) scale(1.4)" opacity="0.6"/><use href="#gz-rose" transform="translate(160,45) scale(1)" opacity="0.5"/><use href="#gz-rose" transform="translate(160,145) scale(1)" opacity="0.5"/><use href="#gz-rose" transform="translate(310,75) scale(1.1)" opacity="0.55"/><use href="#gz-rose" transform="translate(460,50) scale(0.9)" opacity="0.5"/><use href="#gz-rose" transform="translate(460,140) scale(0.9)" opacity="0.5"/><use href="#gz-rose" transform="translate(620,50) scale(0.9)" opacity="0.5"/><use href="#gz-rose" transform="translate(620,140) scale(0.9)" opacity="0.5"/><use href="#gz-rose" transform="translate(770,80) scale(1.1)" opacity="0.55"/><use href="#gz-rose" transform="translate(920,45) scale(1)" opacity="0.5"/><use href="#gz-rose" transform="translate(920,145) scale(1)" opacity="0.5"/><use href="#gz-rose" transform="translate(1050,50) scale(0.9)" opacity="0.5"/><use href="#gz-rose" transform="translate(1150,95) scale(1.4)" opacity="0.6"/>
+    <use href="#firebird-feather" transform="translate(110,95) rotate(-10) scale(1.1)" opacity="0.55"/><use href="#firebird-feather" transform="translate(250,95) rotate(15) scale(0.9)" opacity="0.5"/><use href="#firebird-feather" transform="translate(400,35) rotate(-25) scale(0.8)" opacity="0.45"/><use href="#firebird-feather" transform="translate(550,95) rotate(5) scale(1)" opacity="0.55"/><use href="#firebird-feather" transform="translate(700,35) rotate(-20) scale(0.8)" opacity="0.45"/><use href="#firebird-feather" transform="translate(850,95) rotate(-10) scale(0.9)" opacity="0.5"/><use href="#firebird-feather" transform="translate(1000,95) rotate(15) scale(1.1)" opacity="0.55"/>
+    <use href="#book" transform="translate(200,70) rotate(-15) scale(1)" opacity="0.55"/><use href="#book" transform="translate(430,105) rotate(-5) scale(1.1)" opacity="0.55"/><use href="#book" transform="translate(650,105) rotate(5) scale(1.1)" opacity="0.55"/><use href="#book" transform="translate(880,65) rotate(-10) scale(0.9)" opacity="0.5"/>
+    <use href="#pushkin-silhouette" transform="translate(340,95) scale(1.4)" opacity="0.6"/><use href="#pushkin-silhouette" transform="translate(760,95) scale(1.4) scale(-1,1)" opacity="0.55"/>
+    <use href="#inkwell" transform="translate(520,125) scale(1.2)" opacity="0.6"/><use href="#inkwell" transform="translate(590,55) scale(1)" opacity="0.5"/>
+    <use href="#quill-pen" transform="translate(500,135) rotate(-30) scale(1.1)" opacity="0.55"/><use href="#quill-pen" transform="translate(610,45) rotate(20) scale(0.9)" opacity="0.5"/><use href="#quill-pen" transform="translate(830,125) rotate(-15) scale(1)" opacity="0.5"/>
+    <use href="#fountain-pen" transform="translate(540,115) rotate(-10) scale(1)" opacity="0.55"/><use href="#fountain-pen" transform="translate(570,65) rotate(15) scale(0.9)" opacity="0.5"/><use href="#fountain-pen" transform="translate(850,105) rotate(-5) scale(1)" opacity="0.5"/>
+    <use href="#open-book" transform="translate(270,140) rotate(-12) scale(1.3)" opacity="0.55"/><use href="#open-book" transform="translate(830,50) rotate(8) scale(1.2)" opacity="0.5"/>
+    <path d="M0,28 Q60,18 120,28 Q180,38 240,28 Q300,18 360,28 Q420,38 480,28 Q540,18 600,28 Q660,38 720,28 Q780,18 840,28 Q900,38 960,28 Q1020,18 1080,28 Q1140,38 1200,28" class="gz-white" stroke-width="0.9" opacity="0.4" fill="none"/>
+    <path d="M0,162 Q60,172 120,162 Q180,152 240,162 Q300,172 360,162 Q420,152 480,162 Q540,172 600,162 Q660,152 720,162 Q780,172 840,162 Q900,152 960,162 Q1020,172 1080,162 Q1140,152 1200,162" class="gz-white" stroke-width="0.9" opacity="0.4" fill="none"/>
+  </svg>
+  
+  <div class="header-grid">
+    <div class="header-left">
+      <div class="header-card">
+        <div class="h-title">Русский язык<br><span>с Александром</span></div>
+        <div class="badge-container">
+          <span class="h-badge">👤 Студент: Ha-young 이하영</span>
+          <span class="h-badge">🎓 Уровень: A • 1</span>
+          <span class="h-badge">📖 Тема: «Семья»</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="shimmer"></div>
+
+<nav class="tab-nav">
+  <div class="tricolour"><span class="tc-w"></span><span class="tc-b"></span><span class="tc-r"></span></div>
+  <div class="tab-nav-bg"></div>
+  <div class="tab-buttons">
+    <button class="tab-btn" data-tab="words"><span class="tr">📚 Слова</span><span class="te">Vocabulary</span></button>
+    <button class="tab-btn" data-tab="phrases"><span class="tr">💬 Фразы</span><span class="te">Phrases</span></button>
+    <button class="tab-btn" data-tab="hw"><span class="tr">📝 Задания</span><span class="te">Homework</span></button>
+    <button class="tab-btn" data-tab="answers"><span class="tr">✅ Ответы</span><span class="te">Answers</span></button>
+  </div>
+</nav>
+
+<main>
+  <!-- ===================== РАЗДЕЛ "СЛОВА" ===================== -->
+  <div id="words" class="section active">
+    <div style="margin-bottom:1.5rem;">
+      <div class="sec-label"><h2>Текст урока</h2><span class="pill">New text</span></div>
+      <div class="g-card blue-strip text-card">
+        <p>Здра́вствуйте! Меня́ зову́т Алексе́й. Мне 28 лет. Я живу́ в Са́нкт-Петербу́рге. Са́нкт-Петербу́рг — э́то <em>краси́вый</em> го́род. Я рабо́таю программи́стом. Я <em>пишу́</em> програ́ммы для компью́теров. <em>У меня́ е́сть семья́</em>. Мою́ жену́ зову́т Мари́я. У нас е́сть дочь. Её зову́т А́нна. Мы лю́бим гуля́ть в па́рке и <em>ката́ться</em> на велосипе́дах. Я люблю́ спорт. Я <em>игра́ю</em> в футбо́л и бе́гаю по утра́м.</p>
+      </div>
+    </div>
+    
+    <div class="sec-label"><h2>Слова урока</h2><span class="pill">Lesson’s words</span></div>
+    
+    <!-- СЛОВО 1: семья -->
+    <div class="g-card blue-strip word-card">
+      <div class="word-head"><div><div class="word-ru">Семья́</div><div class="word-en">family</div></div><span class="word-tag">СУЩЕСТВИТЕЛЬНОЕ</span></div>
+      <div class="seg"><div class="seg-label">Значение · Meaning</div><div class="seg-content">Группа людей, связанных родством / A group of people related by blood or marriage.</div></div>
+      <div class="seg"><div class="seg-label">В тексте · In the text</div><div class="seg-content">«У меня́ е́сть семья́.»</div></div>
+      <div class="seg"><div class="seg-label">Склонение · Declension</div><div class="seg-content decl-wrap">
+        <table class="decl">
+          <thead><tr><th>Падеж · Case</th><th>Вопросы · Questions</th><th>Ед. ч. · Singular</th><th>Мн. ч. · Plural</th></tr></thead>
+          <tbody>
+            <tr><td class="case-ru">Именительный<br><span class="case-en-sub">Nominative</span></td><td><span class="question-ru">Кто? Что?</span><span class="question-en">Who? What?</span></td><td>семья́</td><td>се́мьи</td></tr>
+            <tr><td class="case-ru">Родительный<br><span class="case-en-sub">Genitive</span></td><td><span class="question-ru">Кого? Чего? (откуда? без чего?)</span><span class="question-en">Whom? Of what? (from where? without what?)</span></td><td>семьи́</td><td>семе́й</td></tr>
+            <tr><td class="case-ru">Дательный<br><span class="case-en-sub">Dative</span></td><td><span class="question-ru">Кому? Чему? (к чему?)</span><span class="question-en">To whom? To what? (towards what?)</span></td><td>семье́</td><td>се́мьям</td></tr>
+            <tr><td class="case-ru">Винительный<br><span class="case-en-sub">Accusative</span></td><td><span class="question-ru">Кого? Что? (вижу кого? / что?)</span><span class="question-en">Whom? What? (see whom? / what?)</span></td><td>семью́</td><td>се́мьи</td></tr>
+            <tr><td class="case-ru">Творительный<br><span class="case-en-sub">Instrumental</span></td><td><span class="question-ru">Кем? Чем? (с кем? / с чем?)</span><span class="question-en">By whom? With what? (with whom? / with what?)</span></td><td>семьёй</td><td>се́мьями</td></tr>
+            <tr><td class="case-ru">Предложный<br><span class="case-en-sub">Prepositional</span></td><td><span class="question-ru">О ком? О чём? (о ком? / о чём?)</span><span class="question-en">About whom? About what?</span></td><td>о семье́</td><td>о се́мьях</td></tr>
+          </tbody>
+        </table>
+        <div class="table-note">РОД • GENDER: ЖЕНСКИЙ РОД • FEMININE</div>
+      </div></div></div>
+    
+    <!-- СЛОВО 2: знакомства -->
+    <div class="g-card blue-strip word-card">
+      <div class="word-head"><div><div class="word-ru">Знако́мства</div><div class="word-en">acquaintances / getting to know</div></div><span class="word-tag">СУЩЕСТВИТЕЛЬНОЕ</span></div>
+      <div class="seg"><div class="seg-label">Значение · Meaning</div><div class="seg-content">Люди, с которыми знаком; процесс знакомства / People one knows; the process of meeting.</div></div>
+      <div class="seg"><div class="seg-label">В тексте · In the text</div><div class="seg-content">(используется для представления людей)</div></div>
+      <div class="seg"><div class="seg-label">Склонение · Declension</div><div class="seg-content decl-wrap">
+        <table class="decl">
+          <thead><tr><th>Падеж · Case</th><th>Вопросы · Questions</th><th>Ед. ч. · Singular</th><th>Мн. ч. · Plural</th></tr></thead>
+          <tbody>
+            <tr><td class="case-ru">Именительный<br><span class="case-en-sub">Nominative</span></td><td><span class="question-ru">Кто? Что?</span><span class="question-en">Who? What?</span></td><td>знако́мство</td><td>знако́мства</td></tr>
+            <tr><td class="case-ru">Родительный<br><span class="case-en-sub">Genitive</span></td><td><span class="question-ru">Кого? Чего? (откуда? без чего?)</span><span class="question-en">Whom? Of what? (from where? without what?)</span></td><td>знако́мства</td><td>знако́мств</td></tr>
+            <tr><td class="case-ru">Дательный<br><span class="case-en-sub">Dative</span></td><td><span class="question-ru">Кому? Чему? (к чему?)</span><span class="question-en">To whom? To what? (towards what?)</span></td><td>знако́мству</td><td>знако́мствам</td></tr>
+            <tr><td class="case-ru">Винительный<br><span class="case-en-sub">Accusative</span></td><td><span class="question-ru">Кого? Что? (вижу кого? / что?)</span><span class="question-en">Whom? What? (see whom? / what?)</span></td><td>знако́мство</td><td>знако́мства</td></tr>
+            <tr><td class="case-ru">Творительный<br><span class="case-en-sub">Instrumental</span></td><td><span class="question-ru">Кем? Чем? (с кем? / с чем?)</span><span class="question-en">By whom? With what? (with whom? / with what?)</span></td><td>знако́мством</td><td>знако́мствами</td></tr>
+            <tr><td class="case-ru">Предложный<br><span class="case-en-sub">Prepositional</span></td><td><span class="question-ru">О ком? О чём? (о ком? / о чём?)</span><span class="question-en">About whom? About what?</span></td><td>о знако́мстве</td><td>о знако́мствах</td></tr>
+          </tbody>
+        </table>
+        <div class="table-note">РОД • GENDER: СРЕДНИЙ РОД • NEUTER</div>
+      </div></div></div>
+    
+    <!-- СЛОВО 3: красивый -->
+    <div class="g-card blue-strip word-card">
+      <div class="word-head"><div><div class="word-ru">Краси́вый</div><div class="word-en">beautiful</div></div><span class="word-tag">ПРИЛАГАТЕЛЬНОЕ</span></div>
+      <div class="seg"><div class="seg-label">Значение · Meaning</div><div class="seg-content">Приятный внешне, вызывающий восхищение / Pleasing to the eye, admirable.</div></div>
+      <div class="seg"><div class="seg-label">В тексте · In the text</div><div class="seg-content">«Са́нкт-Петербу́рг — э́то краси́вый го́род.»</div></div>
+      <div class="seg"><div class="seg-label">Склонение · Declension (мужской род)</div><div class="seg-content decl-wrap">
+        <table class="decl">
+          <thead><tr><th>Падеж · Case</th><th>Вопросы · Questions</th><th>Ед. ч. · Singular</th><th>Мн. ч. · Plural</th></tr></thead>
+          <tbody>
+            <tr><td class="case-ru">Именительный<br><span class="case-en-sub">Nominative</span></td><td><span class="question-ru">Какой?</span><span class="question-en">Which?</span></td><td>краси́вый</td><td>краси́вые</td></tr>
+            <tr><td class="case-ru">Родительный<br><span class="case-en-sub">Genitive</span></td><td><span class="question-ru">Какого? (откуда? без чего?)</span><span class="question-en">Of which? (from where? without what?)</span></td><td>краси́вого</td><td>краси́вых</td></tr>
+            <tr><td class="case-ru">Дательный<br><span class="case-en-sub">Dative</span></td><td><span class="question-ru">Какому? (к чему?)</span><span class="question-en">To which? (towards what?)</span></td><td>краси́вому</td><td>краси́вым</td></tr>
+            <tr><td class="case-ru">Винительный<br><span class="case-en-sub">Accusative</span></td><td><span class="question-ru">Какой? / Какого? (вижу что? / кого?)</span><span class="question-en">Which? (see what? / whom?)</span></td><td>краси́вый / краси́вого</td><td>краси́вые / краси́вых</td></tr>
+            <tr><td class="case-ru">Творительный<br><span class="case-en-sub">Instrumental</span></td><td><span class="question-ru">Каким? (с чем? / с кем?)</span><span class="question-en">With which? (with what? / with whom?)</span></td><td>краси́вым</td><td>краси́выми</td></tr>
+            <tr><td class="case-ru">Предложный<br><span class="case-en-sub">Prepositional</span></td><td><span class="question-ru">О каком? (о чём? / о ком?)</span><span class="question-en">About which? (about what? / about whom?)</span></td><td>о краси́вом</td><td>о краси́вых</td></tr>
+          </tbody>
+        </table>
+        <div class="table-note">※ Женский род: краси́вая, краси́вой, краси́вую... / Средний род: краси́вое, краси́вого, краси́вому...</div>
+      </div></div></div>
+    
+    <!-- СЛОВО 4: кататься -->
+    <div class="g-card blue-strip word-card">
+      <div class="word-head"><div><div class="word-ru">Ката́ться</div><div class="word-en">to ride / to go (for fun)</div></div><span class="word-tag">ГЛАГОЛ</span></div>
+      <div class="seg"><div class="seg-label">Значение · Meaning</div><div class="seg-content">Передвигаться на чём-либо для удовольствия / To move on something for fun.</div></div>
+      <div class="seg"><div class="seg-label">В тексте · In the text</div><div class="seg-content">«...ката́ться на велосипе́дах.»</div></div>
+      <div class="seg"><div class="seg-label">Формы глаголов · Verbs forms</div><div class="seg-content verb-table-wrap">
+        <table class="verb-table">
+          <thead>
+            <tr><th>Время · Tense</th><th>Вопросы · Questions</th><th><span class="pronoun-yellow">Ед. число (Я / Ты)</span><br>муж. / жен. род</th><th><span class="pronoun-yellow">Мн. число (Мы / Они)</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="tense-title">Будущее<br>Future</td><td><span class="question-ru">Что сделаю?</span><span class="question-en">What will I do?</span></td><td>я бу́ду ката́ться / ты бу́дешь ката́ться</td><td>мы бу́дем ката́ться / они бу́дут ката́ться</td></tr>
+            <tr><td class="tense-title">Настоящее<br>Present</td><td><span class="question-ru">Что делаю?</span><span class="question-en">What do I do?</span></td><td>я ката́юсь / ты ката́ешься</td><td>мы ката́емся / они ката́ются</td></tr>
+            <tr><td class="tense-title">Прошедшее<br>Past</td><td><span class="question-ru">Что сделал? Что сделала?</span><span class="question-en">What did (he/she) do?</span></td><td>я ката́лся / я ката́лась</td><td>мы ката́лись / они ката́лись</td></tr>
+          </tbody>
+        </table>
+        <div class="table-note">Глагол несовершенного вида.</div>
+      </div></div></div>
+    
+    <!-- СЛОВО 5: играть -->
+    <div class="g-card blue-strip word-card">
+      <div class="word-head"><div><div class="word-ru">Игра́ть</div><div class="word-en">to play</div></div><span class="word-tag">ГЛАГОЛ</span></div>
+      <div class="seg"><div class="seg-label">Значение · Meaning</div><div class="seg-content">Заниматься игрой, проводить время в игре / To engage in a game.</div></div>
+      <div class="seg"><div class="seg-label">В тексте · In the text</div><div class="seg-content">«Я игра́ю в футбо́л и бе́гаю по утра́м.»</div></div>
+      <div class="seg"><div class="seg-label">Формы глаголов · Verbs forms</div><div class="seg-content verb-table-wrap">
+        <table class="verb-table">
+          <thead>
+            <tr><th>Время · Tense</th><th>Вопросы · Questions</th><th><span class="pronoun-yellow">Ед. число (Я / Ты)</span><br>муж. / жен. род</th><th><span class="pronoun-yellow">Мн. число (Мы / Они)</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="tense-title">Будущее<br>Future</td><td><span class="question-ru">Что сделаю?</span><span class="question-en">What will I do?</span></td><td>я бу́ду игра́ть / ты бу́дешь игра́ть</td><td>мы бу́дем игра́ть / они бу́дут игра́ть</td></tr>
+            <tr><td class="tense-title">Настоящее<br>Present</td><td><span class="question-ru">Что делаю?</span><span class="question-en">What do I do?</span></td><td>я игра́ю / ты игра́ешь</td><td>мы игра́ем / они игра́ют</td></tr>
+            <tr><td class="tense-title">Прошедшее<br>Past</td><td><span class="question-ru">Что сделал? Что сделала?</span><span class="question-en">What did (he/she) do?</span></td><td>я игра́л / я игра́ла</td><td>мы игра́ли / они игра́ли</td></tr>
+          </tbody>
+        </table>
+        <div class="table-note">Глагол несовершенного вида.</div>
+      </div></div></div>
+  </div>
+
+  <!-- ========== ФРАЗЫ ========== -->
+  <div id="phrases" class="section">
+    <div class="sec-label"><h2>Фразы из текста</h2><span class="pill">4 phrases</span></div>
+    
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">У меня есть жена и дочь</div><div class="phrase-en">I have a wife and a daughter</div></div><span class="phrase-type">семья</span></div><div class="seg"><div class="seg-label">Объяснение</div><div class="seg-content">Конструкция «у меня есть» используется для обозначения принадлежности / The construction "I have" is used to indicate possession.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«У меня́ е́сть семья́. Мою́ жену́ зову́т Мари́я. У нас е́сть дочь.»</div></div></div>
+    
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Работаю программистом</div><div class="phrase-en">I work as a programmer</div></div><span class="phrase-type">профессия</span></div><div class="seg"><div class="seg-label">Объяснение</div><div class="seg-content">Указывает на профессию в творительном падеже / Indicates profession in the instrumental case.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«Я рабо́таю программи́стом.»</div></div></div>
+    
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Пишу программы</div><div class="phrase-en">I write programs</div></div><span class="phrase-type">работа</span></div><div class="seg"><div class="seg-label">Объяснение</div><div class="seg-content">Глагол «писать» + существительное в винительном падеже / The verb "to write" + noun in the accusative case.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«Я пишу́ програ́ммы для компью́теров.»</div></div></div>
+    
+    <div class="g-card yellow-strip phrase-card"><div class="phrase-head"><div><div class="phrase-ru">Я люблю гулять и бегать</div><div class="phrase-en">I love to walk and run</div></div><span class="phrase-type">хобби</span></div><div class="seg"><div class="seg-label">Объяснение</div><div class="seg-content">Глагол «любить» + инфинитив для выражения предпочтений / The verb "to love" + infinitive to express preferences.</div></div><div class="seg"><div class="seg-label">В тексте</div><div class="seg-content">«Я люблю́ спорт. Я игра́ю в футбо́л и бе́гаю по утра́м.»</div></div></div>
+  </div>
+
+  <!-- ========== ЗАДАНИЯ ========== -->
+  <div id="hw" class="section">
+    <div class="sec-label"><h2>Часть 1: Грамматика</h2><span class="pill">Grammar</span></div>
+    <div class="g-card blue-strip grammar-topic">📌 <strong class="t">Тема: Личные местоимения и глаголы в настоящем времени</strong><br>В тексте: <em class="ex">«Я живу́», «я рабо́таю», «я игра́ю», «мы лю́бим гуля́ть»</em>.<br><strong class="r">Правило:</strong> Глаголы в настоящем времени изменяются по лицам и числам.</div>
+
+    <div class="g-card blue-strip ex-card"><div class="ex-head"><div class="ex-num">1</div><div class="ex-title">Поставьте глагол в правильную форму (настоящее время)</div></div><div class="ex-body"><ol>
+      <li>Я ______ в Са́нкт-Петербу́рге. (жить)</li>
+      <li>Алексе́й ______ программи́стом. (работать)</li>
+      <li>Мы ______ в па́рке. (гулять)</li>
+      <li>Ты ______ на велосипе́де? (кататься)</li>
+      <li>Они ______ в футбо́л. (играть)</li>
+      <li>Она ______ програ́ммы. (писать)</li>
+    </ol></div></div>
+
+    <div class="sec-label"><h2>Часть 2: Вопросы «Да / Нет»</h2><span class="pill">Yes / No</span></div>
+    <div class="q-block"><div class="q-item">🔵 1. Алексе́ю 28 лет?</div><div class="q-item">🔵 2. Алексе́й живёт в Москве́?</div><div class="q-item">🔵 3. У Алексе́я есть жена́ и дочь?</div><div class="q-item">🔵 4. Алексе́й не лю́бит спорт?</div><div class="q-item">🔵 5. Они лю́бят ката́ться на велосипе́дах?</div></div>
+
+    <div class="sec-label"><h2>Часть 3: Выбери правильный ответ</h2><span class="pill">Choose the correct answer</span></div>
+    <div class="q-block">
+      <div class="q-item">🟢 1. Где живёт Алексе́й?<br>A) в Москве́<br>B) в Са́нкт-Петербу́рге<br>C) в Ки́еве<br>D) в Минске</div>
+      <div class="q-item">🟢 2. Кем рабо́тает Алексе́й?<br>A) вра́чом<br>B) учи́телем<br>C) программи́стом<br>D) инжене́ром</div>
+      <div class="q-item">🟢 3. Как зову́т жену́ Алексе́я?<br>A) А́нна<br>B) Еле́на<br>C) О́льга<br>D) Мари́я</div>
+      <div class="q-item">🟢 4. Что Алексе́й де́лает по утра́м?<br>A) гуля́ет<br>B) бе́гает<br>C) игра́ет в футбо́л<br>D) ката́ется на велосипе́де</div>
+      <div class="q-item">🟢 5. Что лю́бят де́лать Алексе́й и его́ семья́?<br>A) гуля́ть в па́рке и ката́ться на велосипе́дах<br>B) смотре́ть телеви́зор<br>C) чита́ть кни́ги<br>D) гото́вить еду́</div>
+    </div>
+
+    <div class="sec-label"><h2>Часть 4: Расположение слов в соответствующем порядке</h2><span class="pill">Word order</span></div>
+    <div class="q-block">
+      <div class="q-item">📝 1. живу́ / Я / в / Са́нкт-Петербу́рге</div>
+      <div class="q-item">📝 2. програ́ммы / Я / пишу́ / для / компью́теров</div>
+      <div class="q-item">📝 3. у / есть / меня́ / семья́</div>
+      <div class="q-item">📝 4. зову́т / А́нна / дочь / На́шу</div>
+      <div class="q-item">📝 5. игра́ю / Я / футбо́л / в</div>
+    </div>
+
+    <div class="sec-label"><h2>Часть 5: Убери лишнее слово</h2><span class="pill">Odd one out</span></div>
+    <div class="q-block">
+      <div class="q-item">✂️ 1. Москва, Санкт-Петербург, Париж, Киев</div>
+      <div class="q-item">✂️ 2. программист, врач, учитель, футбол</div>
+      <div class="q-item">✂️ 3. жена, дочь, семья, брат</div>
+      <div class="q-item">✂️ 4. играть, гулять, работать, велосипед</div>
+      <div class="q-item">✂️ 5. бегать, плавать, кататься, красивый</div>
+    </div>
+
+    <div class="sec-label"><h2>Часть 6: Открытые вопросы</h2><span class="pill">Open questions</span></div>
+    <div class="q-block">
+      <div class="q-item">❓ 1. Как зову́т Алексе́я?</div>
+      <div class="q-item">❓ 2. Ско́лько лет Алексе́ю?</div>
+      <div class="q-item">❓ 3. Как зову́т жену́ Алексе́я?</div>
+      <div class="q-item">❓ 4. Как зову́т дочь Алексе́я?</div>
+      <div class="q-item">❓ 5. Како́й го́род Алексе́й называ́ет краси́вым?</div>
+    </div>
+  </div>
+
+  <!-- ========== ОТВЕТЫ ========== -->
+  <div id="answers" class="section">
+    <div class="sec-label"><h2>Ответы к заданиям</h2><span class="pill">Answers</span></div>
+    
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Упражнение 1 — Глаголы (настоящее время)</div><div class="ans-body"><ol>
+      <li>Я <strong>живу́</strong> в Са́нкт-Петербу́рге.</li>
+      <li>Алексе́й <strong>рабо́тает</strong> программи́стом.</li>
+      <li>Мы <strong>гуля́ем</strong> в па́рке.</li>
+      <li>Ты <strong>ката́ешься</strong> на велосипе́де?</li>
+      <li>Они <strong>игра́ют</strong> в футбо́л.</li>
+      <li>Она <strong>пи́шет</strong> програ́ммы.</li>
+    </ol></div></div>
+
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Часть 2 — Вопросы «Да / Нет» (Ответы)</div><div class="ans-body"><ol>
+      <li><span class="ans-yes">Да</span> — Алексе́ю 28 лет.</li>
+      <li><span class="ans-no">Нет</span> — он живёт в Са́нкт-Петербу́рге.</li>
+      <li><span class="ans-yes">Да</span> — у него есть жена́ Мари́я и дочь А́нна.</li>
+      <li><span class="ans-no">Нет</span> — он лю́бит спорт.</li>
+      <li><span class="ans-yes">Да</span> — они лю́бят ката́ться на велосипе́дах.</li>
+    </ol></div></div>
+
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Часть 3 — Выбери правильный ответ</div><div class="ans-body"><ol>
+      <li><strong>B) в Са́нкт-Петербу́рге</strong></li>
+      <li><strong>C) программи́стом</strong></li>
+      <li><strong>D) Мари́я</strong></li>
+      <li><strong>B) бе́гает</strong></li>
+      <li><strong>A) гуля́ть в па́рке и ката́ться на велосипе́дах</strong></li>
+    </ol></div></div>
+
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Часть 4 — Расположение слов в соответствующем порядке</div><div class="ans-body"><ol>
+      <li><strong>Я живу́ в Са́нкт-Петербу́рге.</strong></li>
+      <li><strong>Я пишу́ програ́ммы для компью́теров.</strong></li>
+      <li><strong>У меня́ есть семья́.</strong></li>
+      <li><strong>На́шу дочь зову́т А́нна.</strong></li>
+      <li><strong>Я игра́ю в футбо́л.</strong></li>
+    </ol></div></div>
+
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Часть 5 — Убери лишнее слово</div><div class="ans-body"><ol>
+      <li><strong>Париж</strong> (лишний, так как это город во Франции, остальные — города России/СНГ)</li>
+      <li><strong>футбол</strong> (лишний, так как это спорт, а остальные — профессии)</li>
+      <li><strong>семья</strong> (лишнее, так как это общее понятие, остальные — члены семьи)</li>
+      <li><strong>велосипед</strong> (лишний, так как это предмет, а остальные — действия/глаголы)</li>
+      <li><strong>красивый</strong> (лишнее, так как это прилагательное, а остальные — глаголы)</li>
+    </ol></div></div>
+
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Часть 6 — Открытые вопросы (Краткие ответы)</div><div class="ans-body"><ol>
+      <li><strong>Алексе́й.</strong></li>
+      <li><strong>28 лет.</strong></li>
+      <li><strong>Мари́я.</strong></li>
+      <li><strong>А́нна.</strong></li>
+      <li><strong>Са́нкт-Петербу́рг.</strong></li>
+    </ol></div></div>
+    
+    <div class="g-card ans-strip ans-card"><div class="ans-head">Заметки для преподавателя</div><div class="ans-body" style="color:var(--text-dim);">Поощряйте студента давать полные ответы на открытые вопросы и обсуждать свою семью по аналогии с текстом.</div></div>
+  </div>
+</main>
+<footer>Русский язык с Александром · Ha-young 이하영 · Уровень A1 · Тема «Семья»</footer>
+
+<script>
+  (function() {
+    const btns = document.querySelectorAll('.tab-btn');
+    const sections = {
+      words: document.getElementById('words'),
+      phrases: document.getElementById('phrases'),
+      hw: document.getElementById('hw'),
+      answers: document.getElementById('answers')
+    };
+    document.body.classList.add('js-tabs');
+    function activateTab(tabId) {
+      Object.values(sections).forEach(s => s?.classList.remove('active'));
+      if(sections[tabId]) sections[tabId].classList.add('active');
+      btns.forEach(btn => {
+        btn.classList.remove('active');
+        if(btn.getAttribute('data-tab') === tabId) btn.classList.add('active');
+      });
+    }
+    btns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const tabId = btn.getAttribute('data-tab');
+        if(tabId && sections[tabId]) { activateTab(tabId); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+      });
+    });
+    let defaultActive = null;
+    for(let btn of btns) if(btn.classList.contains('active')) { defaultActive = btn.getAttribute('data-tab'); break; }
+    if(!defaultActive && btns.length) defaultActive = btns[0].getAttribute('data-tab');
+    if(defaultActive && sections[defaultActive]) activateTab(defaultActive);
+    else if(sections.words) activateTab('words');
+  })();
+</script>
+</body>
+</html>
